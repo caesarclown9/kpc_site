@@ -4,4 +4,4 @@ from .models import *
 
 
 admin.site.register(News)
-
+admin.site.register(Rates)
