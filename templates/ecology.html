@@ -1,26 +1,28 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Industry.INC | HTML Template</title>
+	<title>О компании - Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<link href="{% static 'img/left_logo.png' %}" rel="shortcut icon"/>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/slicknav.min.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
 
 	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}"/>
 
 
 	<!--[if lt IE 9]>
@@ -37,40 +39,28 @@
 
 	<!-- Header section  -->
 	<header class="header-section clearfix">
-		<div class="header-top">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-					<div class="col-md-6 text-md-right">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="site-navbar">
 			<!-- Logo -->
-			<a href="index.html" class="site-logo">
-				<img src="img/logo.png" alt="">
+			<a href="{% url 'crud:index' %}" class="site-logo">
+				<img src="{% static 'img/left_logo.png' %}" alt="">
 			</a>
 			<div class="header-right">
 				<div class="header-info-box">
 					<div class="hib-icon">
-						<img src="img/icons/phone.png" alt="" class="">
+						<img src="{% static 'img/icons/phone.png' %}" alt="" class="">
 					</div>
 					<div class="hib-text">
-						<h6>+546 990221 123</h6>
-						<p>contact@industryalinc.com</p>
+						<h6>+996 3722 55505</h6>
+						<p>info@kpc.kg</p>
 					</div>
 				</div>
 				<div class="header-info-box">
 					<div class="hib-icon">
-						<img src="img/icons/map-marker.png" alt="" class="">
+						<img src="{% static 'img/icons/map-marker.png' %}" alt="" class="">
 					</div>
 					<div class="hib-text">
-						<h6>Main Str, no 23</h6>
-						<p>NY, New York PK 23589</p>
+						<h6>улица Промышленная 202</h6>
+						<p>город Жалал-Абад, 715600</p>
 					</div>
 				</div>
 				<button class="search-switch"><i class="fa fa-search"></i></button>
@@ -78,254 +68,83 @@
 			<!-- Menu -->
 			<nav class="site-nav-menu">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
-					<li class="active"><a href="solutions.html">Solutions</a>
-						<ul class="sub-menu">
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="{% url 'crud:index' %}">Главная</a></li>
+					<li><a href="{% url 'crud:about' %}">О нас</a></li>
+					<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
 				</ul>
 			</nav>
 
 		</div>
 	</header>
 	<!-- Header section end  -->
-	
-	<!-- Page top section  -->
-	<section class="page-top-section set-bg" data-setbg="img/page-top-bg/2.jpg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<h2>Our Solutions</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-					<a href="" class="site-btn">Contact us</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Page top section end  -->
 
-	<!-- Services section  -->
-	<section class="services-2-section spad">
-		<div class="container">
-			<div class="service-text">
-				<h2>A group of productive enterprises that produce or supply Goods, Services, or Sources of Income</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="service-item">
-						<div class="si-head">
-							<div class="si-icon">
-								<img src="img/icons/cogwheel.png" alt="">
-							</div>
-							<h5>Mechanical Engineering</h5>
-						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. </p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="service-item">
-						<div class="si-head">
-							<div class="si-icon">
-								<img src="img/icons/helmet.png" alt="">
-							</div>
-							<h5>Profesional Workers</h5>
-						</div>
-						<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="service-item">
-						<div class="si-head">
-							<div class="si-icon">
-								<img src="img/icons/wind-engine.png" alt="">
-							</div>
-							<h5>Green Energy</h5>
-						</div>
-						<p>Sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec con-sequat arcu et commodo interdum. </p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="service-item">
-						<div class="si-head">
-							<div class="si-icon">
-								<img src="img/icons/pollution.png" alt="">
-							</div>
-							<h5>Power Engineering</h5>
-						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. </p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="service-item">
-						<div class="si-head">
-							<div class="si-icon">
-								<img src="img/icons/pumpjack.png" alt="">
-							</div>
-							<h5>Oil & Lubricants</h5>
-						</div>
-						<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="service-item">
-						<div class="si-head">
-							<div class="si-icon">
-								<img src="img/icons/light-bulb.png" alt="">
-							</div>
-							<h5>Power & Energy</h5>
-						</div>
-						<p>Sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec con-sequat arcu et commodo interdum. </p>
-					</div>
-				</div>
+<!-- Page top section  -->
+<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/1.jpg' %}">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+				<h2>Политика охраны окружающей среды, охраны труда и отношений с партнерами</h2>
 			</div>
 		</div>
-	</section>
-	<!-- Services section end  -->
+	</div>
+</section>
+<!-- Page top section end  -->
 
-	<!-- Reserch section  -->
-	<section class="reserch-section spad">
+	<!-- About section -->
+	<section class="about-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4">
-					<ul class="nav nav-tabs reserch-tab-menu" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Oil & Lubricants</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Engeneering</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Green Energy</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4" aria-selected="false">Constructions</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-5" role="tab" aria-controls="tab-5" aria-selected="false">Power</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#tab-6" role="tab" aria-controls="tab-6" aria-selected="false">Others</a>
-						</li>
-					</ul>
+				<div class="col-lg-6">
+					<img src="{% static 'img/About1.jpg' %}" alt="">
 				</div>
-				<div class="col-lg-8">
-					<div class="tab-content reserch-tab">
-						<!-- single tab content -->
-						<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
-							<h2>We produce or supply Goods, & Services, Oils & Lubricants</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor.</p>
-							<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est.</p>
-						</div>
-						<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
-							<h2>We produce or supply Goods, & Services, Oils & Lubricants</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor.</p>
-							<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis</p>
-						</div>
-						<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
-							<h2>We produce or supply Goods, & Services, Oils & Lubricants</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor.</p>
-						</div>
-						<div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="tab-4">
-							<h2>We produce or supply Goods, & Services, Oils & Lubricants</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor.</p>
-							<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est.</p>
-						</div>
-						<div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="tab-5">
-							<h2>We produce or supply Goods, & Services, Oils & Lubricants</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor.</p>
-							<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-						<div class="tab-pane fade" id="tab-6" role="tabpanel" aria-labelledby="tab-6">
-							<h2>We produce or supply Goods, & Services, Oils & Lubricants</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor.</p>
-							<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis commodo.</p>
-						</div>
+				<div class="col-lg-6">
+					<div class="about-text">
+						<p><strong style='color:black'> ПОЛИТИКА в области качества, охраны здоровья и окружающей среды,
+									обеспечения безопасности труда нефтеперерабатывающего завода ЗАО «Кыргыз Петролеум Компани»
+						</strong></p>
+						<p> Нефтеперерабатывающий завод ЗАО «Кыргыз Петролеум Компани» - одно из  динамично развивающихся предприятий в Кыргызской Республике по переработке углеводородного сырья и производству нефтепродуктов.
+							Основная цель предприятия - выпуск и поставка конкурентоспособной продукции, удовлетворяющей требованиям потребителей и получение устойчивой прибыли для дальнейшего развития производства в интересах потребителей и общества, а также обеспечение безопасных условий труда и минимизация экологических воздействий.
+							Повышение качества выпускаемой продукции решающий фактор условий её конкурентоспособности на внутреннем и внешнем рынках.
+						 </p>
 					</div>
 				</div>
-				<div class="col-lg-4">
-					<div class="reserch-info-warp">
-						<a href="" class="site-btn w-100">Download Brochure</a>
-						<div class="info-box">
-							<h3>Contact Us for Help</h3>
-							<p>Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. </p>
-							<div class="footer-info-box">
-								<div class="fib-icon">
-									<img src="img/icons/phone.png" alt="" class="">
-								</div>
-								<div class="fib-text">
-									<p>+546 990221 123<br>contact@industryalinc.com</p>
-								</div>
-							</div>
-							<a href="#">Send us a message</a>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="about-text">
+							<p></p>
+							<p><strong style='color:black'> Основными направлениями своей Политики руководство ЗАО «КПК» определяет следующее: </strong></p>
+							<p><strong> Поставщик: </strong> <br> - взаимовыгодные отношения с поставщиками в целях обеспечения стабильности и ритмичности поставки сырья и товарно-материальных ценностей.</p>
+							<p><strong> Потребитель:</strong> <br> - постоянное повышение удовлетворенности потребителя путем изучения и анализа потребительского рынка нефтепродуктов по ассортименту и качеству с учетом опережения потребительского спроса.</p>
+							<p><strong> Государство и общество:</strong><br> - неукоснительное выполнение законодательных актов правительственных и надзорных органов по обеспечению качества продукции, охраны труда и охраны окружающей среды; <br>
+								- активное участие в реализации государственных и отраслевых программ; <br>
+								- оказание содействия развитию и благосостоянию общества.</p>
+							<p><strong>Персонал:</strong><br> - постоянное повышение квалификации и мотивации сотрудников; <br>
+								- повышение ответственности персонала за выполнение законодательных, нормативных и других требований.</p>
+							<p><strong>Безопасность и условия труда:</strong> <br> - организация контроля по выполнению требований охраны труда и обеспечение средствами защиты работающих; <br>
+								- профессиональный отбор и обучение сотрудников работающих на предприятии;<br>
+								- улучшение инфраструктуры нефтеперерабатывающего завода;<br>
+								- снижение уровня заболеваемости и травматизма.	</p>
+							<p><strong>Окружающая среда:</strong><br>- снижение негативного воздействия деятельности завода на экологию путем обновления морально устаревшего оборудования, технологических процессов и используемых материалов;<br>
+								- выпуск экологически безопасной продукции;<br>
+								- рациональное использование природных ресурсов.</p>
+							<p><strong>Постоянное улучшение:</strong><br>- повышение эффективности функционирования систем менеджмента качества, интегрированной системы менеджмента;<br>
+								- модернизация технологических процессов и оборудования, внедрение новой техники и технологий;<br>
+								- непрерывный мониторинг качества продукции, состояния здоровья работающих, условий труда, техники безопасности и охраны окружающей среды путем своевременного и результативного устранения несоответствий.</p>
+								<p></p>
+								<p><strong>Для достижения поставленных задач данной Политики руководство Компании берет на себя обязательства:</strong><br>
+									- выполнять все продекларированные положения настоящей Политики в области качества, охраны здоровья, обеспечения безопасности труда и охраны окружающей среды;<br>
+									- обеспечивать выполнение законодательных и нормативных актов о труде и охраны окружающей среды Кыргызской Республики;<br>
+									- постоянно повышать результативность системы менеджмента качества и интегрированной системы менеджмента;<br>
+									- совершенствовать систему производственного экологического контроля за соблюдением нормативов выбросов и сбросов, а также правил обращения с отходами производства и рационального использования энергоресурсов;<br>
+									- обеспечивать улучшение условий на рабочих местах, внедрять эффективные средства и методы по повышению безопасности труда, предупреждению заболеваемости, производственного травматизма и аварий;<br>
+									- поддерживать открытый диалог со всеми заинтересованными сторонами по вопросам менеджмента качества, охраны здоровья, обеспечения безопасности труда и охраны окружающей среды.
+								</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-8">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="reserch-text">
-								<h5>Research Results</h5>
-								<p>Quisque orci purus, sodales in est quis, blandit sollici-tudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, con-sectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. </p>
-							</div>
-						</div>
-						<div class="col-md-6 circle-progress-warp">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="circle-progress" data-cptitle="Passion" data-cpid="id-1" data-cpvalue="75" data-cpcolor="#ffc000">
-										<p>Lorem ipsum dolor</p>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="circle-progress" data-cptitle="Passion" data-cpid="id-2" data-cpvalue="50" data-cpcolor="#ffc000">
-										<p>Lorem ipsum dolor</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="skill-warp">
-						<div class="single-progress-item">
-							<div class="progress-bar-style" data-progress="45"></div>
-							<p>Industry</p>
-						</div>
-						<div class="single-progress-item">
-							<div class="progress-bar-style" data-progress="75"></div>
-							<p>Constructions</p>
-						</div>
-						<div class="single-progress-item">
-							<div class="progress-bar-style" data-progress="95"></div>
-							<p>Green Energy</p>
-						</div>
-						<div class="single-progress-item">
-							<div class="progress-bar-style" data-progress="65"></div>
-							<p>Oil & Lubricants</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
-	</section>
-	<!-- Reserch section end  -->
-
-	<!-- Call to action section  -->
-	<section class="cta-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 d-flex align-items-center">
-					<h2>We produce or supply Goods, Services, or Sources</h2>
-				</div>
-				<div class="col-lg-3 text-lg-right" >
-					<a href="#" class="site-btn sb-dark">contact us</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Call to action section end  -->
+	</div>
+	<!-- About section end -->
 
 	<!-- Footer section -->
 	<footer class="footer-section spad">
@@ -333,63 +152,49 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-widget about-widget">
-						<img src="img/logo-light.png" alt="">
-						<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. </p>
-						<div class="footer-social">
-							<a href=""><i class="fa fa-facebook"></i></a>
-							<a href=""><i class="fa fa-twitter"></i></a>
-							<a href=""><i class="fa fa-dribbble"></i></a>
-							<a href=""><i class="fa fa-behance"></i></a>
-						</div>
+						<h4 style='color:#ffc600'>ЗАО "Кыргыз Петролеум Компани"</h4>
+						<p> - является первым интегриро- ванным нефтедобытчиком, пере- работчиком и продавцом нефте- продуктов в КР.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Useful Resources</h2>
-						<ul>
-							<li><a href="">Jobs Vacancies</a></li>
-							<li><a href="">Client Testimonials</a></li>
-							<li><a href="">Green  Energy</a></li>
-							<li><a href="">Chemical Research</a></li>
-							<li><a href="">Oil Extractions</a></li>
-							<li><a href="">About our Work</a></li>
-						</ul>
+						<h2 class="fw-title">Наши Партнеры</h2>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Our Solutions</h2>
+						<h2 class="fw-title">Телефонные Номера (+996 3722)</h2>
 						<ul>
-							<li><a href="">Metal Industry</a></li>
-							<li><a href="">Agricultural Engineering</a></li>
-							<li><a href="">Green  Energy</a></li>
-							<li><a href="">Chemical Research</a></li>
-							<li><a href="">Oil Extractions</a></li>
-							<li><a href="">Manufactoring</a></li>
+							<li><p><strong>55505 </strong>Приемная Президента</p></li>
+							<li><p><strong>52315 </strong>Факс</p></li>
+							<li><p><strong>50327 </strong>Управляющий НПЗ</p></li>
+							<li><p><strong>52775 </strong>Комната Управления НПЗ</p></li>
+							<li><p><strong>50229 </strong>Бухгалтерия</p></li>
+
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-7">
 					<div class="footer-widget">
-						<h2 class="fw-title">Contact Us</h2>
+						<h2 class="fw-title">Контакты</h2>
 						<div class="footer-info-box">
 							<div class="fib-icon">
-								<img src="img/icons/map-marker.png" alt="" class="">
+								<img src="{% static 'img/icons/map-marker.png' %}" alt="" class="">
 							</div>
 							<div class="fib-text">
-								<p>Main Str, no 23 NY,<br>New York PK 23589</p>
+								<p>улица Промышленная 202<br>город Жалал-Абад, 715600</p>
 							</div>
 						</div>
 						<div class="footer-info-box">
 							<div class="fib-icon">
-								<img src="img/icons/phone.png" alt="" class="">
+								<img src="{% static 'img/icons/phone.png' %}" alt="" class="">
 							</div>
 							<div class="fib-text">
-								<p>+546 990221 123<br>contact@industryalinc.com</p>
+								<p>+996 3722 55505<br>info@kpc.com</p>
 							</div>
 						</div>
 						<form class="footer-search">
-							<input type="text" placeholder="Search">
+							<input type="text" placeholder="Поиск">
 							<button><i class="fa fa-search"></i></button>
 						</form>
 					</div>
@@ -401,16 +206,14 @@
 			<div class="row">
 				<div class="col-lg-4 order-2 order-lg-1 p-0">
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <i> "Lamalimited"</i>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 				</div>
 				<div class="col-lg-7 order-1 order-lg-2 p-0">
 					<ul class="footer-menu">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About us</a></li>
-						<li class="active"><a href="solutions.html">Solutions</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="{% url 'crud:index' %}">Главная</a></li>
+						<li><a href="{% url 'crud:about' %}">О нас</a></li>
+						<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
 					</ul>
 				</div>
 			</div>
@@ -431,13 +234,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Search model end -->
 	
 	<!--====== Javascripts & Jquery ======-->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.slicknav.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/circle-progress.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/circle-progress.min.js' %}"></script>
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
 
 	</body>
 </html>

@@ -52,5 +52,18 @@ class Rates(models.Model):
 
 
 
-# class Currency(models.Model):
-#     title1 = models.CharField()
+class Leaders(models.Model):
+    firstname = models.CharField(max_length=20, verbose_name='Имя')
+    lastname = models.CharField(max_length=20, verbose_name='Фамилия')
+    midname = models.CharField(max_length=20, verbose_name='Отчество')
+    position = models.CharField(max_length=50, verbose_name="Должность")
+    body = models.TextField(verbose_name='Описание')
+    image = models.ImageField(verbose_name="Фотография")
+
+    def __str__(self):
+        return f"{self.lastname} {self.firstname} {self.midname}"
+
+    class Meta:
+        verbose_name = 'Начальство'
+        verbose_name_plural = "Начальство"
+

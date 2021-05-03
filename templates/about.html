@@ -1,15 +1,15 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Industry.INC | HTML Template</title>
+	<title>О компании - Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- Favicon -->
-	<link href="{% static 'img/favicon.ico' %}" rel="shortcut icon"/>
+	<link href="{% static 'img/left_logo.png' %}" rel="shortcut icon"/>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
 
@@ -38,22 +39,10 @@
 
 	<!-- Header section  -->
 	<header class="header-section clearfix">
-		<div class="header-top">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-					<div class="col-md-6 text-md-right">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="site-navbar">
 			<!-- Logo -->
-			<a href="index.html" class="site-logo">
-				<img src="{% static 'img/logo.png' %}" alt="">
+			<a href="{% url 'crud:index' %}" class="site-logo">
+				<img src="{% static 'img/left_logo.png' %}" alt="">
 			</a>
 			<div class="header-right">
 				<div class="header-info-box">
@@ -61,8 +50,8 @@
 						<img src="{% static 'img/icons/phone.png' %}" alt="" class="">
 					</div>
 					<div class="hib-text">
-						<h6>+546 990221 123</h6>
-						<p>contact@industryalinc.com</p>
+						<h6>+996 3722 55505</h6>
+						<p>info@kpc.kg</p>
 					</div>
 				</div>
 				<div class="header-info-box">
@@ -70,8 +59,8 @@
 						<img src="{% static 'img/icons/map-marker.png' %}" alt="" class="">
 					</div>
 					<div class="hib-text">
-						<h6>Main Str, no 23</h6>
-						<p>NY, New York PK 23589</p>
+						<h6>улица Промышленная 202</h6>
+						<p>город Жалал-Абад, 715600</p>
 					</div>
 				</div>
 				<button class="search-switch"><i class="fa fa-search"></i></button>
@@ -79,15 +68,9 @@
 			<!-- Menu -->
 			<nav class="site-nav-menu">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li class="active"><a href="about.html">About us</a></li>
-					<li><a href="solutions.html">Solutions</a>
-						<ul class="sub-menu">
-							<li><a href="elements.html">Elements</a></li>
-						</ul>
-					</li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="{% url 'crud:index' %}">Главная</a></li>
+					<li class="active"><a href="{% url 'crud:about' %}">О нас</a></li>
+					<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
 				</ul>
 			</nav>
 
@@ -100,9 +83,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7">
-					<h2>About us</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-					<a href="" class="site-btn">Contact us</a>
+					<h2>О компании</h2>
+					<p>ЗАО "Кыргыз Петролеум Компани" - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
+					<!-- <a href="" class="site-btn"> Организационная структура ЗАО «Кыргыз Петролеум Компани»</a> -->
+					<!-- <p></p> -->
+					<a href="" class="site-btn"> Начальники отделов</a>
 				</div>
 			</div>
 		</div>
@@ -115,22 +100,57 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
-					<img src="{% static 'img/about.jpg' %}" alt="">
+					<img src="{% static 'img/About1.jpg' %}" alt="">
 				</div>
 				<div class="col-lg-6">
 					<div class="about-text">
-						<h2>We produce or supply Goods, & Services</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. </p>
-						<div class="about-sign">
-							<div class="sign">
-								<img src="{% static 'img/sign.png' %}" alt="">
-							</div>
-							<div class="sign-info">
-								<h5>Michael Smith</h5>
-								<span>CEO Industrial INC</span>
-							</div>
-						</div>
+						<p><strong> Краткая информация: </strong></p>
+							<p> Единственным акционером Закрытого акционерного общества «Кыргыз Петролеум Компани» (ЗАО «КПК» или Компания) является ОАО «Кыргызнефтегаз» (ОАО «КНГ») которая на данный момент владеет 100 % акций Компании.
+								Компания занимается производством нефтепродуктов из нефти и других видов сырья и предоставляет услуги по переработке. На данный момент предприятие производит 3 вида продукции: бензин, дизель, мазут.
+								НПЗ (нефтеперерабатывающий завод) ЗАО «КПК» спроектирован для переработки 500,000 тонн сырой нефти в год и несколько меньшего объема альтернативного сырья, такого как газовый конденсат, дистилляты, некондиционные нефтепродукты.  Основным партнером Компании является предприятие - владелец ОАО «Кыргызнефтегаз». Руководством Компании полностью обеспечен количественный и качественный состав предприятия.
+								Следует отметить что ЗАО «КПК» является одним из значимых налогоплательщиков  в Жалал-Абадской  области.
+								Высшим органом управления предприятия является Общее Собрание Акционеров, с правом принятия решения по всем вопросам деятельности Компании. Далее по иерархии управления стоит Совет Директоров.
+								Совет Директоров осуществляет общее руководство деятельностью Компании, за исключением вопросов, отнесенных законодательством к исключительной компетенции общего собрания акционеров. Повседневное управление Компанией осуществляется исполнительным органом, в лице Президента Компании, избираемого Советом Директоров.
+							</p>
 					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="about-text">
+						<p><strong> История Компании </strong></p>
+						<p> Истоки Компании уходят в далекий 1995 год. Между открытым акционерным обществом  «Кыргызнефтегаз» и акционерным обществом с ограниченной ответственностью «ПетроКыргызстан» (Джерси) была достигнута договоренность о создании совместного предприятия ЗАО «Кыргыз Петролеум Компани». Доли акции между участниками данной сделки распределились 50/50.
+							После подписания Инвестиционного соглашения с Правительством Кыргызской Республики в декабре 1995 года, иностранный инвестор обеспечил инвестиционные средства для финансирования обязательств по Инвестиционному соглашению, включая первоначальный вклад для строительства нефтеперерабатывающего завода (НПЗ) и разработки нефтяных месторождений.
+							Строительство НПЗ в городе Жалал-Абад началось в январе 1996 года, и было завершено в установленные сроки - в сентябре 1996 года. Нефтеперерабатывающий завод ЗАО «КПК» был торжественно открыт 6 октября 1996 года.
+							В июне 1996 года Компания начала разработку месторождений с использованием специального оборудования, необходимого для данной деятельности в Кыргызской Республике. Предварительная техническая оценка месторождений показала, что гидравлический разрыв нефтенесущих пластов является наиболее эффективным и выгодным методом улучшения нефтедобычи. Тестовая программа, включающая 21 нефтяную скважину, началась в октябре 1996 года.
+							К концу 1996 года, инвестор полностью выполнил обязательства по вложению объема средств объема средств, предусмотренных как обязательство по документам Компании, и продолжал инвестировать в развитие НПЗ и месторождений.
+							В тоже время были установлены дополнительные резервуары и погрузочное оборудование для приспособления НПЗ к новым условиям. Новые технические усовершенствования на НПЗ были проведены в 1998-2001 годах для увеличения октанового числа производимого бензина. Это было вызвано увеличением количества иностранных современных машин, импортируемых в Кыргызстан.
+							В 2012 году Компания приостановила деятельность по добыче нефти из собственных скважин и сконцентрировала свое внимание на переработке нефти и других видов сырья.
+							6 ноября 2012 года стало исторической датой для Компании. В этот день были полностью оформлены все необходимые документы по покупке  ОАО «Кыргызнефтегаз»  50% акций принадлежащих «Петро Кыргызстан ЛТД». Таким образом, ОАО «Кыргызнефтегаз» стал единственным акционером ЗАО «Кыргыз Петролеум Компани».
+							После приобретения ЗАО «Кыргыз Петролеум Компани», ОАО «Кыргызнефтегаз» стал единственным предприятием, которое имеет законченный цикл производства, начиная от геологоразведочных работ и добычи нефти и заканчивая производством и реализацией нефтепродуктов.
+							Взамен иностранным специалистам, которые прекратили свою работу в Компании, пришли местные специалисты, имеющие достаточный набор знаний, умений и навыков. Сотрудниками предприятия в марте 2012 года создана «Первичная Профсоюзная организация», которая прошла регистрацию в органах юстиции КР в 2016г., и в настоящее время стала самостоятельной общественной профсоюзной организацией и входит в Ассоциацию профсоюзов ОАО «КНГ».  
+							В 2016 году Компания претерпела определенные структурные изменения. Была частично оптимизирована организационная структура предприятия, проводятся меры по модернизации производства. Перед Компанией ставятся смелые задачи и разносторонний комплекс мер по развитию предприятия.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<img src="{% static 'img/story.jpg' %}" alt="">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<img src="{% static 'img/plans.jpg' %}" alt="">
+				</div>
+				<div class="col-lg-6">
+					<div class="about-text">
+						<p><strong> Планы Компании </strong></p>
+							<p> Специалистами предприятия разработана стратегия организационно-технического развития  компании на ближайшую перспективу, в рамках которой планируется модернизация завода с установкой процессов вторичной переработки мазута с увеличением глубины отбора, а также вторичной переработки нафты по увеличению октанового числа. Данные меры направлены, прежде всего, для соответствия продукции международным стандартам.
+								Данная технология позволит предприятию увеличить глубину отбора светлых фракций из имеющегося сырья, что в конечном итоге увеличит денежные потоки на предприятии и повысит привлекательность переработки сырья на НПЗ Компании для ее клиентов.
+								В рамках повышения квалификации персонала на 2017 год планируется провести ряд мероприятий направленных на повышения уровня знаний и умений работников предприятия.
+								Планируется увеличить объем производства продукции, при сохранении текущего уровня потерь. Все финансовые показатели планируется держать на оптимальном уровне и провести организационно-технические мероприятия по оптимизации затрат.
+								Компания  и в дальнейшем собирается прилагать все усилия направленные на эффективное производство продукции и динамичное развитие предприятия с учетом современных требований и изменений в нефтеперерабатывающей отрасли, повышение качества и тесное сотрудничество с партнерами.
+							</p>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -258,51 +278,37 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-widget about-widget">
-						<img src="{% static 'img/logo-light.png' %}" alt="">
-						<p>Lorem ipsum dolor sit amet, consec-tetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. </p>
-						<div class="footer-social">
-							<a href=""><i class="fa fa-facebook"></i></a>
-							<a href=""><i class="fa fa-twitter"></i></a>
-							<a href=""><i class="fa fa-dribbble"></i></a>
-							<a href=""><i class="fa fa-behance"></i></a>
-						</div>
+						<h4 style='color:#ffc600'>ЗАО "Кыргыз Петролеум Компани"</h4>
+						<p> - является первым интегриро- ванным нефтедобытчиком, пере- работчиком и продавцом нефте- продуктов в КР.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Useful Resources</h2>
-						<ul>
-							<li><a href="">Jobs Vacancies</a></li>
-							<li><a href="">Client Testimonials</a></li>
-							<li><a href="">Green  Energy</a></li>
-							<li><a href="">Chemical Research</a></li>
-							<li><a href="">Oil Extractions</a></li>
-							<li><a href="">About our Work</a></li>
-						</ul>
+						<h2 class="fw-title">Наши Партнеры</h2>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Our Solutions</h2>
+						<h2 class="fw-title">Телефонные Номера (+996 3722)</h2>
 						<ul>
-							<li><a href="">Metal Industry</a></li>
-							<li><a href="">Agricultural Engineering</a></li>
-							<li><a href="">Green  Energy</a></li>
-							<li><a href="">Chemical Research</a></li>
-							<li><a href="">Oil Extractions</a></li>
-							<li><a href="">Manufactoring</a></li>
+							<li><p><strong>55505 </strong>Приемная Президента</p></li>
+							<li><p><strong>52315 </strong>Факс</p></li>
+							<li><p><strong>50327 </strong>Управляющий НПЗ</p></li>
+							<li><p><strong>52775 </strong>Комната Управления НПЗ</p></li>
+							<li><p><strong>50229 </strong>Бухгалтерия</p></li>
+
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-7">
 					<div class="footer-widget">
-						<h2 class="fw-title">Contact Us</h2>
+						<h2 class="fw-title">Контакты</h2>
 						<div class="footer-info-box">
 							<div class="fib-icon">
 								<img src="{% static 'img/icons/map-marker.png' %}" alt="" class="">
 							</div>
 							<div class="fib-text">
-								<p>Main Str, no 23 NY,<br>New York PK 23589</p>
+								<p>улица Промышленная 202<br>город Жалал-Абад, 715600</p>
 							</div>
 						</div>
 						<div class="footer-info-box">
@@ -310,11 +316,11 @@
 								<img src="{% static 'img/icons/phone.png' %}" alt="" class="">
 							</div>
 							<div class="fib-text">
-								<p>+546 990221 123<br>contact@industryalinc.com</p>
+								<p>+996 3722 55505<br>info@kpc.com</p>
 							</div>
 						</div>
 						<form class="footer-search">
-							<input type="text" placeholder="Search">
+							<input type="text" placeholder="Поиск">
 							<button><i class="fa fa-search"></i></button>
 						</form>
 					</div>
@@ -326,16 +332,14 @@
 			<div class="row">
 				<div class="col-lg-4 order-2 order-lg-1 p-0">
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <i> "Lamalimited"</i>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 				</div>
 				<div class="col-lg-7 order-1 order-lg-2 p-0">
 					<ul class="footer-menu">
-						<li><a href="index.html">Home</a></li>
-						<li class="active"><a href="about.html">About us</a></li>
-						<li><a href="solutions.html">Solutions</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="{% url 'crud:index'%}">Главная</a></li>
+						<li class="active"><a href="{% url 'crud:about' %}">О нас</a></li>
+						<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
 					</ul>
 				</div>
 			</div>
@@ -343,7 +347,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- Footer section end -->
-	
+
 	<!-- Search model -->
 	<div class="search-model">
 		<div class="h-100 d-flex align-items-center justify-content-center">
