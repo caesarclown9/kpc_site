@@ -1,6 +1,6 @@
 from django.db import models
 
-from .parser import usd_text, eur_text, rub_text, kzt_text
+# from .parser import usd_text, eur_text, rub_text, kzt_text
 
 
 class News(models.Model):
@@ -60,10 +60,25 @@ class Leaders(models.Model):
     body = models.TextField(verbose_name='Описание')
     image = models.ImageField(verbose_name="Фотография")
 
+
     def __str__(self):
         return f"{self.lastname} {self.firstname} {self.midname}"
 
     class Meta:
         verbose_name = 'Начальство'
         verbose_name_plural = "Начальство"
+
+
+class Tables(models.Model):
+    name = models.CharField(max_length=255, verbose_name='Название Таблицы')
+
+    def __str__(self):
+        return str(self.pk)
+
+
+    class Meta:
+        verbose_name='Таблицы'
+        verbose_name_plural="Таблицы"
+
+
 

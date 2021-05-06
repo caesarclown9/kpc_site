@@ -63,7 +63,6 @@
 						<p>город Жалал-Абад, 715600</p>
 					</div>
 				</div>
-				<button class="search-switch"><i class="fa fa-search"></i></button>
 			</div>
 			<!-- Menu -->
 			<nav class="site-nav-menu">
@@ -86,8 +85,8 @@
 					<div class="row">
 						<div class="col-xl-8">
 							<h2><span>ЗАО</span><span>Кыргыз Петролеум </span><span>Компани</span></h2>
-							<a href="" class="site-btn sb-white mr-4 mb-3">Для Клиентов и Партнеров</a>
-							<a href="" class="site-btn sb-dark">Безопасность и Экология</a>
+							<a href="{% url 'crud:partners' %}" class="site-btn sb-white mr-4 mb-3">Для Клиентов и Партнеров</a>
+							<a href="{% url 'crud:ecology' %}" class="site-btn sb-dark">Безопасность и Экология</a>
 						</div>
 					</div>
 				</div>
@@ -97,8 +96,8 @@
 					<div class="row">
 						<div class="col-xl-8">
 							<h2><span>ЗАО</span><span>Кыргыз Петролеум </span><span>Компани</span></h2>
-							<a href="#" class="site-btn sb-white mr-4 mb-3">Для Клиентов и Партнеров</a>
-							<a href="#" class="site-btn sb-dark">Безопасность и Экология</a>
+							<a href="{% url 'crud:partners' %}" class="site-btn sb-white mr-4 mb-3">Для Клиентов и Партнеров</a>
+							<a href="{% url 'crud:ecology' %}" class="site-btn sb-dark">Безопасность и Экология</a>
 						</div>
 					</div>
 				</div>
@@ -108,49 +107,40 @@
 	<!-- Hero section end  -->
 
 	<!-- Services section  -->
-	<section class="services-section">
-		<div class="services-warp">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-6">
-						<div class="service-item">
-							<div class="si-head">
-								<div class="si-icon">
-									<img src="{% static 'img/icons/cogwheel.png' %}" alt="">
+	<section class="services-section1">
+		<div class="services-warp" style='height: 500px'>
+			<div>
+				<h3 style='text-align: center; height: 100px'>Цены на продукцию КПК {{ rates.date }}<img style="height: 65px; width:65px" src="{% static 'img/exchange.jpg' %}" alt=""></h3>
+			</div>
+				<div class="container">
+					<div style='position: absolute; left: 0; width:50%'>
+						<div>
+							<div style='padding: 0 0 0 150px'>
+								<div style='border: 3px dashed black; height: 250px; width: 450px'>
+									<p style='margin: 20px; color: rgb(137,128,96); font-size: 12px; font-weight: bold'>{{rates.title1}} </p>
+									<p style='margin: 20px; color: rgb(128,0,0); font-size: 12px; font-weight: bold'>{{rates.title2}}</p>
+									<p style='margin: 20px; color: rgb(102,102,102); font-size: 12px; font-weight: bold'>{{rates.title3}}</p>
+									<p style='margin: 20px; color: rgb(128,80,0); font-size: 12px; font-weight: bold'>{{rates.title4}}</p>
+									<p style='margin: 20px; color: rgb(0,73,0); font-size: 12px; font-weight: bold'>{{rates.title5}}</p>
 								</div>
-								<h5>Цены на продукцию КПК</h5>
 							</div>
-							<li><span>{{rates.title1}} </span><b>{{rates.price1}}</b></li>
-							<li><span>{{rates.title2}}</span><b>{{rates.price2}}</b></li>
-							<li><span>{{rates.title3}}</span><b>{{rates.price3}}</b></li>
-							<li><span>{{rates.title4}}</span><b>{{rates.price4}}</b></li>
-							<li><span>{{rates.title5}}</span><b>{{rates.price5}}</b></li>
-							</div>
+						</div>
 					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="service-item">
-							<div class="si-head">
-								<div class="si-icon">
-									<img src="{% static 'img/icons/helmet.png' %}" alt="">
-								</div>
-								<h5>Курсы валют</h5>
+					<div style='position: absolute; right: 0; width:54%'>
+						<div>
+							<div>
+								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price1}} сом</p>
+								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price2}} сом</p>
+								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price3}} сом</p>
+								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price4}} сом</p>
+								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price5}} сом</p>
 							</div>
-
-							</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="service-item">
-							<div class="si-head">
-								<div class="si-icon">
-									<img src="{% static 'img/icons/wind-engine.png' %}" alt="">
-								</div>
-								<h5>Погода</h5>
-							</div>
-							<p>Sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec con-sequat arcu et commodo interdum. </p>
+							<!-- <div>
+								<img style='position: absolute; right: 75px; bottom: -60px; width:58%; height:98%' src="{% static 'img/exchange.jpg' %}"/>
+							</div> -->
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 	</section>
 	<!-- Services section end  -->
@@ -166,11 +156,11 @@
 						{% if x.image %}
 						<img style="height:325px;max-width:325px;" src="{{ x.image.url }}" alt="">
 						{% endif %}
-						<div class="fb-text">
+						<div style="word-wrap: break-word; height:350px" class="fb-text">
 							<h4>{{ x.title }}</h4>
 							<p></p>
 							<p>{{ x.body|truncatechars:30 }}</p>
-							<a href="{% url 'crud:news_detail' pk=x.pk%}" class="fb-more-btn">Подробнее</a>
+							<a style="position: absolute; bottom:50px" href="{% url 'crud:news_detail' pk=x.pk%}" class="fb-more-btn">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -204,7 +194,7 @@
 										как собственник компании. Специалисты из «Кыргыз Петролеум Компани» помимо компетенций,
 										ребята отличаются высокой вовлеченностью в проект и честностью, всегда на связи, выжимают максимум из доступных ресурсов!
 										Желаю сохранить этот подход к делу и всяческих успехов нашим партнерам!</p>
-									<img src="img/testimonial-thumb.jpg" alt="" class="testi-thumb">
+									<img style="height:85px; width:85px" src="{% static 'img/erlan.jpg' %}" alt="" class="testi-thumb">
 									<div class="testi-info">
 										<h5>Бердибаев Эрлан Жыргалбекович</h5>
 										<span>Генеральный Директор ОсОО "Lama limited"</span>
@@ -250,14 +240,10 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="video-box set-bg" data-setbg="img/video-box.jpg">
-						<a href="https://www.youtube.com/watch?v=wbnaHgSttVo" class="video-popup">
-							<i class="fa fa-play"></i>
-						</a>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/wvshn9xuOO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 	<!-- Video section end  -->
 
@@ -309,10 +295,6 @@
 								<p>+996 3722 55505<br>info@kpc.com</p>
 							</div>
 						</div>
-						<form class="footer-search">
-							<input type="text" placeholder="Поиск">
-							<button><i class="fa fa-search"></i></button>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -338,17 +320,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	<!-- Footer section end -->
 
-	<!-- Search model -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
-	<!-- Search model end -->
-	
 	<!--====== Javascripts & Jquery ======-->
 	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>

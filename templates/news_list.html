@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Все Новости</title>
+	<title>Все Новости - Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
@@ -63,7 +63,6 @@
 						<p>город Жалал-Абад, 715600</p>
 					</div>
 				</div>
-				<button class="search-switch"><i class="fa fa-search"></i></button>
 			</div>
 			<!-- Menu -->
 			<nav class="site-nav-menu">
@@ -85,13 +84,13 @@
 				<div class="col-lg-4 col-md-6">
 					<div class="feature-box">
 						{% if x.image %}
-						<img src="{{ x.image.url }}" alt="">
+						<img style="height:325px;max-width:325px;" src="{{ x.image.url }}" alt="">
 						{% endif %}
-						<div class="fb-text">
-							<h4>{{ x.title }}</h4>
+						<div style='height:350px' class="fb-text">
+							<h4 style="word-wrap: break-word">{{ x.title }}</h4>
 							<p></p>
 							<p>{{ x.body|truncatechars:30 }}</p>
-							<a href="{% url 'crud:news_detail' pk=x.pk%}" class="fb-more-btn">Подробнее</a>
+							<a style="position: absolute; bottom:50px" href="{% url 'crud:news_detail' pk=x.pk%}" class="fb-more-btn">Подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -99,7 +98,7 @@
 		</div>
 	</section>
 
-    	<!-- Footer section -->
+	<!-- Footer section -->
 	<footer class="footer-section spad">
 		<div class="container">
 			<div class="row">
@@ -146,10 +145,6 @@
 								<p>+996 3722 55505<br>info@kpc.com</p>
 							</div>
 						</div>
-						<form class="footer-search">
-							<input type="text" placeholder="Поиск">
-							<button><i class="fa fa-search"></i></button>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -175,17 +170,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	<!-- Footer section end -->
 
-	<!-- Search model -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
-	<!-- Search model end -->
-	
 	<!--====== Javascripts & Jquery ======-->
 	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>

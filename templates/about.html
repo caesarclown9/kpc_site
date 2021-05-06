@@ -63,7 +63,6 @@
 						<p>город Жалал-Абад, 715600</p>
 					</div>
 				</div>
-				<button class="search-switch"><i class="fa fa-search"></i></button>
 			</div>
 			<!-- Menu -->
 			<nav class="site-nav-menu">
@@ -87,7 +86,7 @@
 					<p>ЗАО "Кыргыз Петролеум Компани" - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
 					<!-- <a href="" class="site-btn"> Организационная структура ЗАО «Кыргыз Петролеум Компани»</a> -->
 					<!-- <p></p> -->
-					<a href="" class="site-btn"> Начальники отделов</a>
+					<a href="{% url 'crud:all_leaders' %}" class="site-btn">Начальство</a>
 				</div>
 			</div>
 		</div>
@@ -157,120 +156,6 @@
 	</section>
 	<!-- About section end -->
 
-	<!-- Milestones section -->
-	<section class="milestones-section set-bg" data-setbg="{% static 'img/milestones-bg.jpg' %}">
-		<div class="container text-white">
-			<div class="row">
-				<div class="col-lg-3 col-sm-6">
-					<div class="milestone">
-						<div class="milestone-icon">
-							<img src="{% static 'img/icons/plug.png' %}" alt="">
-						</div>
-						<div class="milestone-text">
-							<span>Clients</span>
-							<h2>725</h2>
-							<p>Nam ornare ipsum </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="milestone">
-						<div class="milestone-icon">
-							<img src="{% static 'img/icons/light.png' %}" alt="">
-						</div>
-						<div class="milestone-text">
-							<span>Growth</span>
-							<h2>45%</h2>
-							<p>Nam ornare ipsum </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="milestone">
-						<div class="milestone-icon">
-							<img src="{% static 'img/icons/traffic-cone.png' %}" alt="">
-						</div>
-						<div class="milestone-text">
-							<span>Projects</span>
-							<h2>59</h2>
-							<p>Nam ornare ipsum </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6">
-					<div class="milestone">
-						<div class="milestone-icon">
-							<img src="{% static 'img/icons/worker.png' %}" alt="">
-						</div>
-						<div class="milestone-text">
-							<span>Emploees</span>
-							<h2>138</h2>
-							<p>Nam ornare ipsum </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Milestones section end -->
-
-	<!-- Team section -->
-	<section class="team-section spad">
-		<div class="container">
-			<div class="team-text">
-				<h2>Our Amazing Team</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est. Nam ornare ipsum ac accumsan auctor. Donec consequat arcu et commodo interdum. Vivamus posuere lorem lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci purus, sodales in est quis, blandit sollicitudin est.</p>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="team-member">
-						<img src="{% static 'img/team/1.jpg' %}" alt="">
-						<div class="member-info">
-							<h3>Michael Smith</h3>
-							<p>Engeneer Chemist </p>
-							<a href="#" class="site-btn">See C.V.</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="team-member">
-						<img src="{% static 'img/team/2.jpg' %}" alt="">
-						<div class="member-info">
-							<h3>Jessica Steing</h3>
-							<p>Engeneer Chemist </p>
-							<a href="#" class="site-btn">See C.V.</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="team-member">
-						<img src="{% static 'img/team/3.jpg' %}" alt="">
-						<div class="member-info">
-							<h3>Chris Williams</h3>
-							<p>Engeneer Chemist </p>
-							<a href="#" class="site-btn">See C.V.</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Team section end -->
-
-	<!-- Call to action section  -->
-	<section class="cta-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 d-flex align-items-center">
-					<h2>We produce or supply Goods, Services, or Sources</h2>
-				</div>
-				<div class="col-lg-3 text-lg-right" >
-					<a href="#" class="site-btn sb-dark">contact us</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Call to action section end  -->
 
 	<!-- Footer section -->
 	<footer class="footer-section spad">
@@ -319,10 +204,6 @@
 								<p>+996 3722 55505<br>info@kpc.com</p>
 							</div>
 						</div>
-						<form class="footer-search">
-							<input type="text" placeholder="Поиск">
-							<button><i class="fa fa-search"></i></button>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -337,7 +218,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				</div>
 				<div class="col-lg-7 order-1 order-lg-2 p-0">
 					<ul class="footer-menu">
-						<li><a href="{% url 'crud:index'%}">Главная</a></li>
+						<li><a href="{% url 'crud:index' %}">Главная</a></li>
 						<li class="active"><a href="{% url 'crud:about' %}">О нас</a></li>
 						<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
 					</ul>
@@ -348,17 +229,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	<!-- Footer section end -->
 
-	<!-- Search model -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div>
-	<!-- Search model end -->
-	
 	<!--====== Javascripts & Jquery ======-->
 	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
