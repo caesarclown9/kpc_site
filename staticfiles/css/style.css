@@ -640,11 +640,10 @@
    padding-left: 25px;
    padding-bottom: 15px;
    display: inline-block;
-   background: #ffc000;
  }
  
  .hero-item h2 span:nth-child(1) {
-   color: #081624;
+   color: #ca2c00;
  }
  
  .hero-item h2 span:nth-child(2) {
