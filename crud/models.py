@@ -4,9 +4,9 @@ from django.db import models
 
 
 class News(models.Model):
-    title = models.CharField(max_length=200)
-    body = models.TextField()
-    image = models.ImageField(blank=True, null=True)
+    title = models.CharField(max_length=200,verbose_name='Заголовок')
+    body = models.TextField(verbose_name='Текст')
+    image = models.ImageField(blank=True, null=True,verbose_name='Картинка')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -81,4 +81,19 @@ class Tables(models.Model):
         verbose_name_plural="Таблицы"
 
 
+
+
+class Slides(models.Model):
+    title = models.CharField(max_length=30, verbose_name='Название')
+    body = models.CharField(max_length=35, verbose_name='Описание')
+    image = models.ImageField(verbose_name='Картинка')
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+
+    class Meta:
+        verbose_name='Слайды'
+        verbose_name_plural="Слайды"
 

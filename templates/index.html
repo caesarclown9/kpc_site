@@ -34,7 +34,7 @@
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
-		<div class="loader"></div>
+		<div class="loader"></div>style='background: rgb(172, 18, 18)'
 	</div>
 
 	<!-- Header section  -->
@@ -76,74 +76,26 @@
 		</div>
 	</header>
 	<!-- Header section end  -->
-	
+
 	<!-- Hero section  -->
-	<section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hero-item set-bg" data-setbg="{% static 'img/background3.jpg' %}">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-8">
-							<h2><span>ЗАО</span><span>Кыргыз Петролеум </span><span>Компани</span></h2>
-							<a href="{% url 'crud:partners' %}" class="site-btn sb-white mr-4 mb-3">Для Клиентов и Партнеров</a>
-							<a href="{% url 'crud:ecology' %}" class="site-btn sb-dark">Безопасность и Экология</a>
+	<section class="hero-section" style='padding-top: 80px; height: 400px'>
+		<div class="hero-slider owl-carousel" style='height: 500px; width: 800px; margin:auto; '>
+			{% for slide in slides %}
+				<div class="hero-item set-bg" style='height: 500px'  data-setbg="{{ slide.image.url }}">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-8">
+								<h2><span style='position:absolute; margin-top: 65px'>{{ slide.title }}</span></h2>
+								<h2><span style='position:absolute; margin-top: 100px; font-size: 35px'>{{ slide.body }}</span></h2>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="hero-item set-bg" data-setbg="{% static 'img/hero-slider/2.jpg' %}">
-				<div class="container">
-					<div class="row">
-						<div class="col-xl-8">
-							<h2><span>ЗАО</span><span>Кыргыз Петролеум </span><span>Компани</span></h2>
-							<a href="{% url 'crud:partners' %}" class="site-btn sb-white mr-4 mb-3">Для Клиентов и Партнеров</a>
-							<a href="{% url 'crud:ecology' %}" class="site-btn sb-dark">Безопасность и Экология</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</section>
 	<!-- Hero section end  -->
-
-	<!-- Services section  -->
-	<section class="services-section1">
-		<div class="services-warp" style='height: 500px'>
-			<div>
-				<h3 style='text-align: center; height: 100px'>Цены на продукцию КПК {{ rates.date }}<img style="height: 65px; width:65px" src="{% static 'img/exchange.jpg' %}" alt=""></h3>
-			</div>
-				<div class="container">
-					<div style='position: absolute; left: 0; width:58%'>
-						<div>
-							<div style='padding: 0 0 0 150px'>
-								<div style='border: 3px dashed black; height: 250px; width: 650px'>
-									<p style='margin: 20px; color: rgb(137,128,96); font-size: 12px; font-weight: bold'>{{rates.title1}} </p>
-									<p style='margin: 20px; color: rgb(128,0,0); font-size: 12px; font-weight: bold'>{{rates.title2}}</p>
-									<p style='margin: 20px; color: rgb(102,102,102); font-size: 12px; font-weight: bold'>{{rates.title3}}</p>
-									<p style='margin: 20px; color: rgb(128,80,0); font-size: 12px; font-weight: bold'>{{rates.title4}}</p>
-									<p style='margin: 20px; color: rgb(0,73,0); font-size: 12px; font-weight: bold'>{{rates.title5}}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div style='position: absolute; right: 0; width:54%'>
-						<div>
-							<div>
-								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price1}} сом</p>
-								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price2}} сом</p>
-								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price3}} сом</p>
-								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price4}} сом</p>
-								<p style='margin: 20px; font-size: 12px; color:black'>{{rates.price5}} сом</p>
-							</div>
-							<!-- <div>
-								<img style='position: absolute; right: 75px; bottom: -60px; width:58%; height:98%' src="{% static 'img/exchange.jpg' %}"/>
-							</div> -->
-						</div>
-					</div>
-				</div>
-		</div>
-	</section>
-	<!-- Services section end  -->
+	
 
 	<!-- Features section   -->
 	<section class="features-section spad set-bg" data-setbg="{% static 'img/features-bg.jpg' %}">
@@ -159,7 +111,7 @@
 						<div style="word-wrap: break-word; height:350px" class="fb-text">
 							<h4>{{ x.title }}</h4>
 							<p></p>
-							<p>{{ x.body|truncatechars:30 }}</p>
+							<p style='color: black'>{{ x.body|truncatechars:30 }}</p>
 							<a style="position: absolute; bottom:50px" href="{% url 'crud:news_detail' pk=x.pk%}" class="fb-more-btn">Подробнее</a>
 						</div>
 					</div>
@@ -249,7 +201,7 @@
 
 
 	<!-- Footer section -->
-	<footer class="footer-section spad" style='background: rgb(172, 18, 18)'>
+	<footer class="footer-section spad">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
@@ -298,24 +250,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="footer-buttom">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-4 order-2 order-lg-1 p-0">
-					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <i> "Lamalimited"</i>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-				</div>
-				<div class="col-lg-7 order-1 order-lg-2 p-0">
-					<ul class="footer-menu">
-						<li class="active"><a href="{% url 'crud:index' %}">Главная</a></li>
-						<li><a href="{% url 'crud:about' %}">О нас</a></li>
-						<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 		</div>
 	</footer>
 	<!-- Footer section end -->

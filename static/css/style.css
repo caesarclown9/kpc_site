@@ -59,7 +59,7 @@
  
  p {
    font-size: 14px;
-   color: #718090;
+   color: #000000;
    line-height: 2;
  }
  
@@ -469,6 +469,7 @@
  
  .header-info-box .hib-text p {
    margin-bottom: 0;
+   color: wheat
  }
  
  .search-switch {
@@ -594,15 +595,15 @@
  .hero-slider .owl-nav button.owl-prev,
  .hero-slider .owl-nav button.owl-next {
    position: absolute;
-   width: 84px;
-   height: 84px;
-   top: calc( 50% - 42px);
+   width: 40px;
+   height: 60px;
+   top: calc( 50% - 50px);
    left: 0;
    font-size: 30px;
    color: #081624;
-   background: #fff;
+   background: #bda91ca6;
    -webkit-transition: all 0.4s;
-   transition: all 0.4s;
+   transition: all 0.6s;
  }
  
  .hero-slider .owl-nav button.owl-prev:hover,
@@ -638,13 +639,14 @@
  
  .hero-item h2 span {
    padding-left: 25px;
-   padding-bottom: 15px;
    display: inline-block;
-   background: #ffc000;
+   background: #df3f3f;
+   font-size: 40px;
  }
  
  .hero-item h2 span:nth-child(1) {
-   color: #081624;
+   color: #ffffff;
+   font-family: 'OpenSans-Bold',sans-serif;
  }
  
  .hero-item h2 span:nth-child(2) {
@@ -887,6 +889,7 @@
    font-size: 18px;
    font-style: italic;
    margin-bottom: 55px;
+   color: wheat
  }
  
  .testimonial .testi-thumb {
@@ -974,10 +977,13 @@
  ---------------------*/
  
  .footer-section {
-   background: #17172d;
+   background: #000000;
    padding-bottom: 0;
  }
  
+ .footer-section p {
+   color: white
+ }
  .footer-widget {
    margin-bottom: 40px;
  }
