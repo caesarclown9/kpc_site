@@ -86,40 +86,75 @@
     <button type="button" class="btn btn-danger" style='margin-top: 50px; margin-left: 926px'><a href="{% url 'crud:all_prices' %}" style='color:white'>Цены за все время</a></button>
 
 
-    <table class="table" style='margin-left:200px; width:900px; margin-bottom: 150px'>
+    <table class="table table-bordered" style='margin-left:200px; width:900px; margin-bottom: 150px;'>
         <thead class='thead-dark'>
           <tr>
-            <th scope="col">№</th>
-            <th scope="col">Наименование Продукта</th>
+			<th scope="col" style='width: 250px'>Наименование Продукта</th>
+			<th scope="col">Форма оплаты</th>
+			<th scope="col">Налоги</th>
             <th scope="col">Цена</th>
           </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row">1</th>
-                <td>{{ rates.title1 }}</td>
-                <td>{{ rates.price1 }} сом</td>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>Бензин Аи-80</th>
+                <td>Наличная</td>
+                <td>с НДС и НСП</td>
+				{% if rates.price1 %}
+				<td>{{ rates.price1 }} сом за 1 л.</td>
+				{% endif %}
             </tr>
             <tr>
-                <th scope="row">2</th>
-                <td>{{ rates.title2 }}</td>
-                <td>{{ rates.price2}} сом</td>
+                <td>Безналичная</td>
+                <td>с НДС, но без НСП</td>
+				{% if rates.price2 %}
+				<td>{{ rates.price2 }} сом за 1 л.</td>
+				{% endif %}
             </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>{{ rates.title3 }}</td>
-                <td>{{ rates.price3 }} сом</td>
+			<tr>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>Дизельное топливо марки Л-0,2-40.</th>
+                <td>Наличная</td>
+                <td>с НДС и НСП</td>
+				{% if rates.diesel_price1 %}
+				<td>{{ rates.diesel_price1 }} сом за 1 л.</td>
+				{% endif %}
             </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>{{ rates.title4 }}</td>
-                <td>{{ rates.price4 }} сом</td>
+			<tr>
+                <td>Безналичная</td>
+                <td>с НДС, но без НСП</td>
+				{% if rates.diesel_price2 %}
+				<td>{{ rates.diesel_price2 }} сом за 1 л.</td>
+				{% endif %}
             </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>{{ rates.title5 }}</td>
-                <td>{{ rates.price5 }} сом</td>
+			<tr>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>Дизельное топливо марки Л-0,2-40. Л-0,5-40 с температурой застывания минус 30°С</th>
+                <td>Наличная</td>
+                <td>с НДС и НСП</td>
+				{% if rates.diesel_price3 %}
+				<td>{{ rates.diesel_price3 }} сом за 1 л.</td>
+				{% endif %}
             </tr>
+			<tr>
+                <td>Безналичная</td>
+                <td>с НДС, но без НСП</td>
+				{% if rates.diesel_price4 %}
+				<td>{{ rates.diesel_price4 }} сом за 1 л.</td>
+				{% endif %}
+            </tr>
+			<tr>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>Мазут М-100</th>
+                <td>Наличная</td>
+                <td>с НДС и НСП</td>
+				{% if rates.fuel_price1 %}
+				<td>{{ rates.fuel_price1 }} сом за 1 тн.</td>
+				{% endif %}
+            </tr>
+			<tr>
+                <td>Безналичная</td>
+                <td>с НДС, но без НСП</td>
+				{% if rates.fuel_price2 %}
+				<td>{{ rates.fuel_price2 }} сом за 1 тн.</td>
+				{% endif %}            </tr>
         </tbody>
       </table>
 

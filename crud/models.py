@@ -21,12 +21,14 @@ class News(models.Model):
 
 class Rates(models.Model):
     date = models.DateField(auto_now=True)
-    form = models.CharField(max_length=255, default='Форма оплаты', verbose_name='Форма оплаты')
-    tax = models.CharField(max_length=255, default='Налоги', verbose_name='Налоги')
-    ai_80 = models.CharField(max_length=255, default='Бензин Аи-80', verbose_name="Бензин Аи-80")
-    diesel1 = models.CharField(max_length=255, default='Дизельное топливо марки Л-0,2-40', verbose_name='Дизельное топливо марки Л-0,2-40')
-    diesel2 = models.CharField(max_length=255, default="Дизельное топливо марки Л-0,2. Л-0,5-40 с температурой застывания минус 30°С", verbose_name="Дизельное топливо марки Л-0,2. Л-0,5-40 с температурой застывания минус 30°С")
-    fuel_oil = models.CharField(max_length=255, default='Мазут М-100', verbose_name='Мазут М-100')
+    price1 = models.IntegerField(verbose_name='Цена аи-80 нал', blank=True, null=True)
+    price2 = models.IntegerField(verbose_name='Цена аи-80 безнал', blank=True, null=True)
+    diesel_price1 = models.IntegerField(verbose_name='Цена ДТ нал', blank=True, null=True)
+    diesel_price2 = models.IntegerField(verbose_name='Цена ДТ безнал', blank=True, null=True)
+    diesel_price3 = models.IntegerField(verbose_name='Цена ДТ с темп. застывания нал', blank=True, null=True)
+    diesel_price4 = models.IntegerField(verbose_name='Цена ДТ с темп. застывания безнал', blank=True, null=True)
+    fuel_price1 = models.IntegerField(verbose_name='Цена Мазута нал', blank=True, null=True)
+    fuel_price2 = models.IntegerField(verbose_name='Цена Мазута безнал', blank=True, null=True)
 
     def __str__(self):
         return str(self.date)
@@ -35,10 +37,6 @@ class Rates(models.Model):
     class Meta:
         verbose_name = 'Цены'
         verbose_name_plural = 'Цены'
-
-
-class RatesDetails(models.Model):
-    name = models.CharField(max_length=255)
 
 
 
