@@ -39,9 +39,9 @@
 
 	<!-- Header section  -->
 	<header class="header-section clearfix">
-		<div class="site-navbar">
+		<div class="site-navbar" style='background: rgb(172, 18, 18); height: 70px'>
 			<!-- Logo -->
-			<a href="{% url 'crud:index' %}" class="site-logo">
+			<a href="{% url 'crud:index' %}" class="site-logo" style="position: absolute; left: -15px;">
 				<img src="{% static 'img/left_logo.png' %}" alt="">
 			</a>
 			<div class="header-right">
@@ -65,14 +65,16 @@
 				</div>
 			</div>
 			<!-- Menu -->
-			<nav class="site-nav-menu">
+			<nav class="site-nav-menu" style='margin-left: 240px'>
 				<ul>
-					<li class="active"><a href="{% url 'crud:index' %}">Главная</a></li>
-					<li><a href="{% url 'crud:about' %}">О нас</a></li>
-					<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
+					<li class="active"><a href="{% url 'crud:index' %}" style='height: 70px'>Главная</a></li>
+					<li><a href="{% url 'crud:about' %}" style='height: 70px'>О нас</a></li>
+					<li><a href="{% url 'crud:partners' %}" style='height: 70px'>Для Клиентов и Партнеров</a></li>
 				</ul>
 			</nav>
-
+			<div style='height: 76.5px; background: black; margin-left: 195px; margin-top: 16px'>
+				<h3 style='color: white; text-align: center; padding: 20px'>ЗАО <<Кыргыз Петролеум Компани>></h3>
+			</div>
 		</div>
 	</header>
 	<!-- Header section end  -->

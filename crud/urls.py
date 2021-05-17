@@ -13,5 +13,9 @@ urlpatterns = [
     path('news/<int:pk>/', news_detail, name='news_detail'),
     path('leaders/', all_leaders, name='all_leaders'),
     path('leaders/<int:pk>/', leader_detail, name='leader_detail'),
-    path('partners/<int:pk>/', TableView.as_view(), name='tables')
+    path('partners/<int:pk>/', TableView.as_view(), name='tables'),
+    path('plans-progress/', plans, name='plans'),
+    path('prices', prices, name='prices'),
+    path('all_prices', all_prices, name='all_prices'),
+    path('testimonials/', testimonials, name='testimonials')
 ]

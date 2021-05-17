@@ -9,13 +9,32 @@ def index(request):
     currency = all
     news = News.objects.order_by("-created_at")[:3]
     slides = Slides.objects.order_by(("-date"))[:5]
-    rates = Rates.objects.latest('date')
     return render(request, 'index.html', locals())
 
 
 def about(request):
     return render(request, 'about.html', locals())
 
+
+def prices(request):
+    rates = Rates.objects.latest('date')
+    return render(request, 'prices.html', locals())
+
+
+def all_prices(request):
+    rates = Rates.objects.all()
+    return render(request, 'all_prices.html', locals())
+
+
+def testimonials(request):
+    t = Testimonials.objects.all()
+    return render(request, 'testimonials.html', locals())
+
+
+def plans(request):
+    plans = Plans.objects.all()
+    progress = Progress.objects.all()
+    return render(request, 'plans.html', locals())
 
 def partners(request):
     tables = Tables.objects.all()

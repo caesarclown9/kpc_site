@@ -39,9 +39,9 @@
 
 	<!-- Header section  -->
 	<header class="header-section clearfix">
-		<div class="site-navbar">
+		<div class="site-navbar" style='background: rgb(172, 18, 18); height: 70px'>
 			<!-- Logo -->
-			<a href="{% url 'crud:index' %}" class="site-logo">
+			<a href="{% url 'crud:index' %}" class="site-logo" style="position: absolute; left: -15px;">
 				<img src="{% static 'img/left_logo.png' %}" alt="">
 			</a>
 			<div class="header-right">
@@ -65,28 +65,27 @@
 				</div>
 			</div>
 			<!-- Menu -->
-			<nav class="site-nav-menu">
+			<nav class="site-nav-menu" style='margin-left: 240px'>
 				<ul>
-					<li><a href="{% url 'crud:index' %}">Главная</a></li>
-					<li class="active"><a href="{% url 'crud:about' %}">О нас</a></li>
-					<li><a href="{% url 'crud:partners' %}">Для Клиентов и Партнеров</a></li>
+					<li><a href="{% url 'crud:index' %}" style='height: 70px'>Главная</a></li>
+					<li class="active"><a href="{% url 'crud:about' %}" style='height: 70px'>О нас</a></li>
+					<li><a href="{% url 'crud:partners' %}" style='height: 70px'>Для Клиентов и Партнеров</a></li>
 				</ul>
 			</nav>
-
+			<div style='height: 76.5px; background: black; margin-left: 195px; margin-top: 16px'>
+				<h3 style='color: white; text-align: center; padding: 20px'>ЗАО <<Кыргыз Петролеум Компани>></h3>
+			</div>
 		</div>
 	</header>
 	<!-- Header section end  -->
 	
 	<!-- Page top section  -->
-	<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/1.jpg' %}">
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/1.jpg' %}" style='margin-top: 150px; height: 200px;'>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7">
-					<h2>О компании</h2>
-					<p>ЗАО "Кыргыз Петролеум Компани" - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
-					<!-- <a href="" class="site-btn"> Организационная структура ЗАО «Кыргыз Петролеум Компани»</a> -->
-					<!-- <p></p> -->
-					<a href="{% url 'crud:all_leaders' %}" class="site-btn">Начальство</a>
+					<p style='font-size: 18px'>ЗАО "Кыргыз Петролеум Компани" - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
+					<button type="button" class="btn btn-danger"><a href="{% url 'crud:all_leaders' %}" style='color:white'>Руководство Компании</a></button>
 				</div>
 			</div>
 		</div>
