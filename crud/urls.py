@@ -17,5 +17,6 @@ urlpatterns = [
     path('plans-progress/', plans, name='plans'),
     path('prices', prices, name='prices'),
     path('all_prices', all_prices, name='all_prices'),
+    path('prices/<int:pk>/', price_detail, name='price_detail'),
     path('testimonials/', testimonials, name='testimonials')
 ]

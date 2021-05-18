@@ -19,5 +19,8 @@ admin.site.register(News)
 admin.site.register(Rates)
 admin.site.register(Leaders)
 admin.site.register(Slides)
-
+admin.site.register(Testimonials)
+admin.site.register(Partners)
+admin.site.register(Plans)
+admin.site.register(Progress)
 

@@ -79,9 +79,11 @@
 	</header>
 	<!-- Header section end  -->
 
-    <div>
-        <h5><a href=""></a></h5>
+	{% for r in rates %}
+    <div style='margin-top: 150px'>
+		<h5><a href="{% url 'crud:price_detail' pk=r.pk %}">{{ r.date }}</a></h5>
     </div>
+	{% endfor %}
 
     	<!-- Footer section -->
 	<footer class="footer-section spad">

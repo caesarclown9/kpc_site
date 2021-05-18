@@ -79,6 +79,29 @@
 	</header>
 	<!-- Header section end  -->
 
+	<section class="testimonial-section" style='width:900px; margin-top: 150px; margin-left: 200px; margin-bottom: 100px'>
+		<div class="container-fluid">
+			<!-- <div class="col-lg-6 p-0"> -->
+				<div class="testimonial-box">
+					<div class="testi-box-warp">
+						<h2>Отзывы клиентов</h2>
+						<div class="testimonial-slider owl-carousel">
+							{% for review in t %}
+							<div class="testimonial">
+								<p>{{ review.text }}</p>
+								<img src="{{ review.image.url }}" alt="" class="testi-thumb">
+								<div class="testi-info">
+									<h5>{{ review.name }}</h5>
+									<span>{{ review.position }}</span>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
     	<!-- Footer section -->
 	<footer class="footer-section spad">

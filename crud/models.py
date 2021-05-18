@@ -21,14 +21,14 @@ class News(models.Model):
 
 class Rates(models.Model):
     date = models.DateField(auto_now=True)
-    price1 = models.IntegerField(verbose_name='Цена аи-80 нал', blank=True, null=True)
-    price2 = models.IntegerField(verbose_name='Цена аи-80 безнал', blank=True, null=True)
-    diesel_price1 = models.IntegerField(verbose_name='Цена ДТ нал', blank=True, null=True)
-    diesel_price2 = models.IntegerField(verbose_name='Цена ДТ безнал', blank=True, null=True)
-    diesel_price3 = models.IntegerField(verbose_name='Цена ДТ с темп. застывания нал', blank=True, null=True)
-    diesel_price4 = models.IntegerField(verbose_name='Цена ДТ с темп. застывания безнал', blank=True, null=True)
-    fuel_price1 = models.IntegerField(verbose_name='Цена Мазута нал', blank=True, null=True)
-    fuel_price2 = models.IntegerField(verbose_name='Цена Мазута безнал', blank=True, null=True)
+    price1 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена аи-80 нал', blank=True, null=True)
+    price2 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена аи-80 безнал', blank=True, null=True)
+    diesel_price1 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена ДТ нал', blank=True, null=True)
+    diesel_price2 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена ДТ безнал', blank=True, null=True)
+    diesel_price3 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена ДТ с темп. застывания нал', blank=True, null=True)
+    diesel_price4 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена ДТ с темп. застывания безнал', blank=True, null=True)
+    fuel_price1 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена Мазута нал', blank=True, null=True)
+    fuel_price2 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена Мазута безнал', blank=True, null=True)
 
     def __str__(self):
         return str(self.date)

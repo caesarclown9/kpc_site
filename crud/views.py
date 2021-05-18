@@ -21,6 +21,10 @@ def prices(request):
     return render(request, 'prices.html', locals())
 
 
+def price_detail(request, pk):
+    rates = Rates.objects.filter(pk=pk).first()
+    return render(request, 'price_details.html', locals())
+
 def all_prices(request):
     rates = Rates.objects.all()
     return render(request, 'all_prices.html', locals())
