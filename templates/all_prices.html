@@ -79,11 +79,18 @@
 	</header>
 	<!-- Header section end  -->
 
-	{% for r in rates %}
-    <div style='margin-top: 150px'>
-		<h5><a href="{% url 'crud:price_detail' pk=r.pk %}">{{ r.date }}</a></h5>
-    </div>
-	{% endfor %}
+	<div class="container my-4">
+		<div class="row text-center" style='margin-top:150px'>
+			{% for r in rates %}
+			<div class="col-md-6 mb-4">
+				<h2 style='font-weight: bold; margin-bottom: 10px; font-size: 24px'><a href="{% url 'crud:price_detail' pk=r.pk %}" style='color:black'>{{r.date}}</a></h2>
+				<a href="{% url 'crud:price_detail' pk=r.pk %}"><img style='filter: drop-shadow(2px 4px 6px black); width:100px; height: 100px' class="rounded-circle" alt="100x100" src="{% static 'img/barrel.jpg' %}"
+					data-holder-rendered="true">
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
 
     	<!-- Footer section -->
 	<footer class="footer-section spad">
