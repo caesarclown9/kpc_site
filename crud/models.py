@@ -1,12 +1,10 @@
 from django.db import models
 
-# from .parser import usd_text, eur_text, rub_text, kzt_text
-
 
 class News(models.Model):
     title = models.CharField(max_length=200,verbose_name='Заголовок')
     body = models.TextField(verbose_name='Текст')
-    image = models.ImageField(blank=True, null=True,verbose_name='Картинка')
+    image = models.FileField(blank=True, null=True,verbose_name='Картинка')
     created_at = models.DateTimeField(auto_now_add=True)
 
 
@@ -17,6 +15,13 @@ class News(models.Model):
         verbose_name = 'Новости'
         verbose_name_plural = 'Новости'
 
+
+class NewsImage(models.Model):
+    news = models.ForeignKey(News, on_delete=models.CASCADE)
+    images = models.ImageField(upload_to='images/news/')
+
+    def __str__(self):
+        return self.news.title
 
 
 class Rates(models.Model):
@@ -59,18 +64,13 @@ class Leaders(models.Model):
 
 class Tables(models.Model):
     name = models.CharField(max_length=255, verbose_name='Название таблицы')
-    num = models.CharField(max_length=255, verbose_name='№', null=True)
-    params = models.CharField(max_length=255, verbose_name="Наименование параметров")
-    norms = models.CharField(max_length=255, verbose_name='Нормы для нефти')
-    method = models.CharField(max_length=255, verbose_name="Метод испытания")
-    note = models.CharField(max_length=255, verbose_name="Примечание")
+
 
     def __str__(self):
         return str(self.name)
 
 
     class Meta:
-        # db_table = "Norms_requirements"
         verbose_name='Требования норм'
         verbose_name_plural="Требования норм"
 
@@ -124,6 +124,8 @@ class Partners(models.Model):
 class Plans(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     body = models.TextField(verbose_name='Текст')
+    image = models.FileField(blank=True, null=True, verbose_name="Картинка")
+
 
     def __str__(self):
         return self.title
@@ -133,9 +135,18 @@ class Plans(models.Model):
         verbose_name_plural = 'Планы'
 
 
+class PlansImage(models.Model):
+    plans = models.ForeignKey(Plans, on_delete=models.CASCADE)
+    images = models.ImageField(upload_to='images/plans/')
+
+    def __str__(self):
+        return self.plans.title
+
+
 class Progress(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     body = models.TextField(verbose_name='Текст')
+    image = models.FileField(blank=True, null=True, verbose_name="Картинка")
 
     def __str__(self):
         return self.title
@@ -143,3 +154,11 @@ class Progress(models.Model):
     class Meta:
         verbose_name = 'Достижения'
         verbose_name_plural = 'Достижения'
+
+
+class ProgressImage(models.Model):
+    progress = models.ForeignKey(Progress, on_delete=models.CASCADE)
+    images = models.ImageField(upload_to='images/progress/')
+
+    def __str__(self):
+        return self.progress.title

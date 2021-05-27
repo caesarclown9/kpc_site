@@ -79,25 +79,63 @@
 	</header>
 	<!-- Header section end  -->
 
-    <section class="features-section spad set-bg" data-setbg="{% static 'img/features-bg.jpg' %}">
+    <section class="section gray-bg" id="blog" style="height: 700px; margin-top:100px">
 		<div class="container">
+			<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_news' %}" style='color:white'>Все Новости</a></h4></button>
 			<div class="row">
-				{% for x in news %}
-				<div class="col-lg-4 col-md-6">
-					<div class="feature-box">
-						{% if x.image %}
-						<img style="height:325px;max-width:325px;" src="{{ x.image.url }}" alt="">
-						{% endif %}
-						<div style='height:350px' class="fb-text">
-							<h4 style="word-wrap: break-word">{{ x.title }}</h4>
-							<p></p>
-							<p>{{ x.body|truncatechars:30 }}</p>
-							<a style="position: absolute; bottom:50px" href="{% url 'crud:news_detail' pk=x.pk%}" class="fb-more-btn">Подробнее</a>
+				{% for post in news %}
+				<div class="col-lg-4">
+					<div class="blog-grid">
+						<div class="blog-img">
+							<div class="date">{{ post.created_at|date:"F d Y" }}</div>
+							<a href="{% url 'crud:news_detail' pk=post.pk %}">
+								<img style='width:380px; height:300px' src="{{ post.image.url}}" title="" alt="">
+							</a>
+						</div>
+						<div class="blog-info" style='height:200px'>
+							<h5>{{ post.title|truncatechars:30 }}</h5>
+							<p>{{ post.body|truncatechars:45 }}</p>
+							<div class="btn-bar" style='position:absolute; bottom: 10px'>
+								<a href="{% url 'crud:news_detail' pk=post.pk %}" class="px-btn-arrow">
+									<span>Подробнее</span>
+									<i class="arrow"></i>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 				{% endfor %}
+			</div>
 		</div>
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-center" style='margin-top: 50px'>
+				{% if not page_obj.has_previous %}
+			  <li class="page-item disabled">
+				<a class="page-link" tabindex="-1">Пред</a>
+			  </li>
+			  {% else %}
+			  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Пред</a></li>
+			  {% endif%}
+			  {% for i in paginator.page_range %}
+				{% if page_number == i %}
+				  <li class="page-item active">
+					<a class="page-link" href="?page={{i}}">{{ i }}<span class="sr-only">(current)</span></a>
+				  </li>
+				{% else %}
+				<li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+				  {% endif %}
+			  {% endfor %}
+	
+			  {% if not page_obj.has_next %}
+			  <li class="page-item disabled">
+				<a class="page-link">След</a>
+			  </li>
+			  {% else %}
+			  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}" tabindex="-1">След</a>
+			  </li>
+			  {% endif %}
+			</ul>
+		  </nav>
 	</section>
 
 	<!-- Footer section -->
@@ -112,8 +150,12 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Наши Партнеры</h2>
-					</div>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
+						<ul>
+							{% for p in partners %}
+								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
+							{% endfor %}
+						</ul>					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">

@@ -78,20 +78,24 @@
 		</div>
 	</header>
 	<!-- Header section end  -->
-	
+
 	<!-- Page top section  -->
-	<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/1.jpg' %}" style='margin-top: 150px; height: 200px;'>
-		<div class="container">
+	<section class="page-top-section set-bg" data-setbg="{% static 'img/page-top-bg/1.jpg' %}" style='margin-top: 150px; height: 355px;'>
+		<div class="container" style='padding-top: 5px'>
 			<div class="row">
-				<div class="col-lg-7">
+				<div class="col-lg-6"style='margin:auto'>
 					<p style='font-size: 18px'>ЗАО "Кыргыз Петролеум Компани" - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
 					<button type="button" class="btn btn-danger"><a href="{% url 'crud:all_leaders' %}" style='color:white'>Руководство Компании</a></button>
+				</div>
+				<div class="col-lg-6">
+					<video controls autoplay style='height:355px'>
+						<source src="{% static 'video/kpc.mp4' %}" type="video/mp4">
+					</video>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Page top section end  -->
-
 
 	<!-- About section -->
 	<section class="about-section spad">
@@ -132,12 +136,16 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<img src="{% static 'img/story.jpg' %}" alt="">
+					<img src="{% static 'img/about5.jpg' %}" alt="" style='padding-bottom: 10px'>
+					<img src="{% static 'img/about2.jpg' %}" alt="" style='padding-bottom: 10px'>
+					<img src="{% static 'img/about6.jpg' %}" alt="" style='padding-bottom: 10px'>
+					<img src="{% static 'img/about7.jpg' %}" alt="">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-6">
-					<img src="{% static 'img/plans.jpg' %}" alt="">
+					<img src="{% static 'img/about3.jpg' %}" alt="" style='padding-bottom: 10px'>
+					<img src="{% static 'img/about4.jpg' %}" alt="">
 				</div>
 				<div class="col-lg-6">
 					<div class="about-text">
@@ -168,7 +176,12 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Наши Партнеры</h2>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
+						<ul>
+							{% for p in partners %}
+								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
+							{% endfor %}
+						</ul>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Kyrgyz Petroleum Company</title>
+	<title> Цены на {{rates.date}}Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
@@ -171,8 +171,12 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Наши Партнеры</h2>
-					</div>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
+						<ul>
+							{% for p in partners %}
+								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
+							{% endfor %}
+						</ul>					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">

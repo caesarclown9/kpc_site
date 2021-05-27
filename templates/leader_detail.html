@@ -80,19 +80,26 @@
 	<!-- Header section end  -->
 
 
-    <div class='row'>
+    <!-- <div class='row'>
         <div class="col-md-4 col-sm-6", style="width:800px; margin:0 auto">
             {% if leader.image %}
-                <img style="height:425px;max-width:325px;" src="{{ leader.image.url }}" alt="">
+                <img style="height:270px;max-width:270px;margin-top:150px" src="{{ leader.image.url }}" alt="">
             {% endif %}
-				<p></p>
+				<h4>{{ leader.lastname}} {{ leader.firstname}} {{ leader.midname}}</h4>
                 <h5>{{ leader.position}}</h4>
-                <p></p>
-                <h4>{{ leader.lastname}} {{ leader.firstname}} {{ leader.midname}}</h4>
-                <p></p>
-                <p style="border:black; border-style:solid;">{{ leader.body }}</p>
+                <p>{{ leader.body }}</p>
         </div>
-    </div>
+    </div> -->
+	<div>
+		{% if leader.image %}
+		<img style="height:270px;max-width:270px;margin-top:150px;margin-left:500px" src="{{ leader.image.url }}" alt="">
+		{% endif %}
+	</div>
+    <div style='text-align: center; margin-left: 180px; margin-right: 160px; margin-bottom: 50px'>
+		<h3 style='padding:30px'>{{ leader.lastname }} {{ leader.firstname }} {{ leader.midname }}</h3>
+		<h5 style='padding-bottom:30px; color:grey'>{{ leader.position }}</h5>
+		<span>{{ leader.body }}</span>
+	</div>
 
 
 	<!-- Footer section -->
@@ -107,8 +114,12 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Наши Партнеры</h2>
-					</div>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
+						<ul>
+							{% for p in partners %}
+								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
+							{% endfor %}
+						</ul>					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">

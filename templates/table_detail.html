@@ -79,13 +79,13 @@
 	</header>
 	<!-- Header section end  -->
 
-    <div style='text-align: center; padding: 50px; height: 150px'>
-        <h3>{{ table.name }}</h3>
+    <div style='text-align: center; height: 80px'>
+        <h3 style='font-size: 24px; margin-top:150px'>{{ table.name }}</h3>
     </div>
 
 
-    <table class='table table-bordered'>
-        <thead>
+    <table class='table table-bordered' style='margin: auto; width:900px; margin-bottom: 90px'>
+        <thead class='thead-dark'>
             <tr>
                 {% for h in header %}
                     <th>{{ h }}</th>
@@ -122,8 +122,12 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Наши Партнеры</h2>
-					</div>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
+						<ul>
+							{% for p in partners %}
+								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
+							{% endfor %}
+						</ul>					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">

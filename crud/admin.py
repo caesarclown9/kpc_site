@@ -1,26 +1,47 @@
 from django.contrib import admin
-from import_export.admin import ImportExportModelAdmin
 
 from .models import *
-from .resources import TablesResources
+
+class NewsImageAdmin(admin.StackedInline):
+    model = NewsImage
 
 
-class RatesAdmin(admin.ModelAdmin):
-    model = Rates
-    list_display = ['form', 'tax', 'ai_80', 'diesel1', 'diesel2', 'fuel_oil']
-    list_editable = ['form', 'tax', 'ai_80', 'diesel1', 'diesel2', 'fuel_oil']
+@admin.register(News)
+class NewsAdmin(admin.ModelAdmin):
+    inlines = [NewsImageAdmin]
 
-@admin.register(Tables)
-class TablesAdmin(ImportExportModelAdmin):
-    resource_class = TablesResources
-    list_display = ('params', 'norms', 'method', 'note')
+    class Meta:
+        model = News
 
-admin.site.register(News)
+
+
+class PlansImageAdmin(admin.StackedInline):
+    model = PlansImage
+
+@admin.register(Plans)
+class PlansAdmin(admin.ModelAdmin):
+    inlines = [PlansImageAdmin]
+
+    class Meta:
+        model = Plans
+
+
+class ProgressImageAdmin(admin.StackedInline):
+    model = ProgressImage
+
+@admin.register(Progress)
+class ProgressAdmin(admin.ModelAdmin):
+    inlines = [ProgressImageAdmin]
+
+    class Meta:
+        model = Progress
+
+
 admin.site.register(Rates)
+admin.site.register(Tables)
 admin.site.register(Leaders)
 admin.site.register(Slides)
 admin.site.register(Testimonials)
 admin.site.register(Partners)
-admin.site.register(Plans)
-admin.site.register(Progress)
+
 

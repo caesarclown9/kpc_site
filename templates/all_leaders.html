@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Начальство - Kyrgyz Petroleum Company</title>
+	<title>Руководство - Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
@@ -77,29 +77,22 @@
 			</div>
 		</div>
 	</header>
-	<!-- Header section end  -->
-
-    <section class="features-section spad set-bg" data-setbg="{% static 'img/features-bg.jpg' %}" style='margin-top: 150px'>
-		<div class="container">
-			<div class="row">
-				{% for leader in leaders %}
-				<div class="col-lg-4 col-md-6">
-					<div class="feature-box">
-						{% if leader.image %}
-						<img style="height:425px;max-width:325px;" src="{{ leader.image.url }}" alt="">
-						{% endif %}
-						<div style='height:350px' class="fb-text">
-							<h5>{{ leader.position}}</h4>
-							<h4>{{ leader.lastname}} {{ leader.firstname}} {{ leader.midname}}</h4>
-							<p></p>
-							<p>{{ leader.body|truncatechars:30 }}</p>
-							<a style="position: absolute; bottom:50px" href="{% url 'crud:leader_detail' pk=leader.pk%}" class="fb-more-btn">Подробнее</a>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
+	<div class="row" style='margin-top: 150px; margin-left: 200px'>
+		{% for leader in leaders %}
+		<div class="column-leader">
+		  <div class="card-leader" style='height: 495px'>
+			<a href="{% url 'crud:leader_detail' pk=leader.pk %}"><img src="{{ leader.image.url}}" alt="{{ leader.firstname}}" style="width:230px; height: 230px"></a>
+			<div class="container-leader" style='text-align:center'>
+			  <h5 style='padding: 5px; word-break: break-all'>{{ leader.firstname}}</h5>
+			  <h5 style='padding: 5px; word-break: break-all'>{{ leader.lastname }}</h5>
+			  <h5 style='padding: 5px; word-break: break-all'>{{ leader.midname }}</h5>
+			  <p class="title-leader">{{ leader.position | truncatechars:40 }}</p>
+			  <p style='word-break:break-all'>{{ leader.body | truncatechars:30 }}</p>
+			</div>
+		  </div>
 		</div>
-	</section>
+		{% endfor %}
+	</div>
 
 
 	<!-- Footer section -->
@@ -114,8 +107,12 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Наши Партнеры</h2>
-					</div>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
+						<ul>
+							{% for p in partners %}
+								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
+							{% endfor %}
+						</ul>					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">

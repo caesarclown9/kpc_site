@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Kyrgyz Petroleum Company</title>
+	<title>Все Цены - Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<!-- Favicon -->
 	<link href="{% static 'img/left_logo.png' %}" rel="shortcut icon"/>
 
@@ -81,16 +81,42 @@
 
 	<div class="container my-4">
 		<div class="row text-center" style='margin-top:150px'>
-			{% for r in rates %}
-			<div class="col-md-6 mb-4">
-				<h2 style='font-weight: bold; margin-bottom: 10px; font-size: 24px'><a href="{% url 'crud:price_detail' pk=r.pk %}" style='color:black'>{{r.date}}</a></h2>
-				<a href="{% url 'crud:price_detail' pk=r.pk %}"><img style='filter: drop-shadow(2px 4px 6px black); width:100px; height: 100px' class="rounded-circle" alt="100x100" src="{% static 'img/barrel.jpg' %}"
-					data-holder-rendered="true">
-				</a>
+			{% for r in page_obj %}
+			<div class="col-md-6 mb-4" style='border-style:groove; border-radius: 5px; background: #e8e8e8f7; padding-top: 5px; margin-right: 10px'>
+				<h2 style='font-weight: bold; margin-bottom: 10px; font-size: 24px'><a href="{% url 'crud:price_detail' pk=r.pk %}"'>{{r.date}}</a></h2>
 			</div>
 			{% endfor %}
 		</div>
 	</div>
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center" style='margin-bottom: 30px'>
+			{% if not page_obj.has_previous %}
+		  <li class="page-item disabled">
+			<a class="page-link" tabindex="-1">Пред</a>
+		  </li>
+		  {% else %}
+		  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Пред</a></li>
+		  {% endif%}
+		  {% for i in paginator.page_range %}
+			{% if page_number == i %}
+			  <li class="page-item active">
+				<a class="page-link" href="?page={{i}}">{{ i }}<span class="sr-only">(current)</span></a>
+			  </li>
+			{% else %}
+			<li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+			  {% endif %}
+		  {% endfor %}
+
+		  {% if not page_obj.has_next %}
+		  <li class="page-item disabled">
+			<a class="page-link">След</a>
+		  </li>
+		  {% else %}
+		  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}" tabindex="-1">След</a>
+		  </li>
+		  {% endif %}
+		</ul>
+	  </nav>
 
     	<!-- Footer section -->
 	<footer class="footer-section spad">
@@ -104,8 +130,12 @@
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
-						<h2 class="fw-title">Наши Партнеры</h2>
-					</div>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
+						<ul>
+							{% for p in partners %}
+								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
+							{% endfor %}
+						</ul>					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">
