@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>{{ plans.title }} - Kyrgyz Petroleum Company</title>
+	<title>Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
@@ -79,34 +79,38 @@
 	</header>
 	<!-- Header section end  -->
 
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style='width: 900px; margin-top:150px; margin-left: 200px; margin-bottom: 100px'>
-		<div class="carousel-inner">
-			<div class="carousel-item active" style='max-height: 400px'>
-				<img class="d-block w-100" src="{{plans.image.url}}" alt="First slide">
-			</div>
-			{% for p in photos %}
-				<div class="carousel-item" style='max-height: 400px'>
-					<img class="d-block w-100" src="{{p.images.url}}">
+    <section class="section gray-bg" id="blog" style="height: 700px; margin-top:100px">
+		<div class="container">
+			<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_social' %}" style='color:white'>Все Новости</a></h4></button>
+			<div class="row">
+				{% for post in social %}
+				<div class="col-lg-4">
+					<div class="blog-grid">
+						<div class="blog-img">
+							<div class="date">{{ post.created_at|date:"F d Y" }}</div>
+							<a href="{% url 'crud:social_detail' pk=post.pk %}">
+								<img style='width:380px; height:300px' src="{{ post.image.url}}" title="" alt="">
+							</a>
+						</div>
+						<div class="blog-info" style='height:200px'>
+							<h5>{{ post.title|truncatechars:30 }}</h5>
+							<p>{{ post.body|truncatechars:45 }}</p>
+							<div class="btn-bar" style='position:absolute; bottom: 10px'>
+								<a href="{% url 'crud:social_detail' pk=post.pk %}" class="px-btn-arrow">
+									<span>Подробнее</span>
+									<i class="arrow"></i>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
-		  	{% endfor %}
+				{% endfor %}
+			</div>
 		</div>
-		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="sr-only">Next</span>
-		</a>
-	  </div>
-	<div style='text-align: center; margin-left: 180px; margin-right: 160px; margin-bottom: 50px'>
-		<h3 style='padding-bottom:30px'>{{ plans.title }}</h3>
-		<span>{{ plans.body }}</span>
-	</div>
+	</section>
 
 
-
-	<!-- Footer section -->
+    	<!-- Footer section -->
 	<footer class="footer-section spad">
 		<div class="container">
 			<div class="row">

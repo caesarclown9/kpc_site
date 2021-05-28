@@ -6,31 +6,38 @@ from django.views.generic import TemplateView
 from .models import *
 
 def index(request):
-    currency = all
-    news = News.objects.order_by("-created_at")[:3]
+    news = News.objects.latest('created_at')
+    social = Social.objects.latest('created_at')
+    leader = Leaders.objects.latest('created_at')
     slides = Slides.objects.order_by(("-date"))[:5]
-    partners = Partners.objects.all()
     return render(request, 'index.html', locals())
 
 
+def all_social(request):
+    social = Social.objects.all()
+    return render(request, 'all_social.html', locals())
+
+
+def social_detail(request, pk):
+    social = Social.objects.filter(pk=pk).first()
+    photos = SocialImage.objects.filter(social=social)
+    return render(request, 'social_detail.html', locals())
+
+
 def about(request):
-    partners = Partners.objects.all()
     return render(request, 'about.html', locals())
 
 
 def prices(request):
-    partners = Partners.objects.all()
     rates = Rates.objects.latest('date')
     return render(request, 'prices.html', locals())
 
 
 def price_detail(request, pk):
-    partners = Partners.objects.all()
     rates = Rates.objects.filter(pk=pk).first()
     return render(request, 'price_details.html', locals())
 
 def all_prices(request):
-    partners = Partners.objects.all()
     rates = Rates.objects.all()
     paginator = Paginator(rates, 7)
     page_number = request.GET.get('page')
@@ -39,51 +46,43 @@ def all_prices(request):
 
 
 def testimonials(request):
-    partners = Partners.objects.all()
     t = Testimonials.objects.all()
     return render(request, 'testimonials.html', locals())
 
 
 def plans(request):
-    partners = Partners.objects.all()
     plans = Plans.objects.all()
     progress = Progress.objects.all()
     return render(request, 'plans.html', locals())
 
 
 def plan_detail(request, pk):
-    partners = Partners.objects.all()
     plans = Plans.objects.filter(pk=pk).first()
     photos = PlansImage.objects.filter(plans=plans)
     return render(request, 'plan-details.html', locals())
 
 
 def progress_detail(request, pk):
-    partners = Partners.objects.all()
     progress = Progress.objects.filter(pk=pk).first()
     photos = ProgressImage.objects.filter(progress=progress)
     return render(request, 'progress_details.html', locals())
 
 def partners(request):
-    partners = Partners.objects.all()
     tables = Tables.objects.all()
     return render(request, 'partners.html', locals())
 
 
 def ecology(request):
-    partners = Partners.objects.all()
     return render(request, 'ecology.html', locals())
 
 
 def news_detail(request, pk):
-    partners = Partners.objects.all()
     post = News.objects.filter(pk=pk).first()
     photos = NewsImage.objects.filter(news=post)
     return render(request, 'news_detail.html', locals())
 
 
 def all_news(request):
-    partners = Partners.objects.all()
     news = News.objects.all()
     paginator = Paginator(news, 7)
     page_number = request.GET.get('page')
@@ -92,13 +91,11 @@ def all_news(request):
 
 
 def all_leaders(request):
-    partners = Partners.objects.all()
     leaders = Leaders.objects.all()
     return render(request, 'all_leaders.html', locals())
 
 
 def leader_detail(request, pk):
-    partners = Partners.objects.all()
     leader = Leaders.objects.filter(pk=pk).first()
     return render(request, 'leader_detail.html', locals())
 
@@ -109,7 +106,7 @@ class TableView(TemplateView):
 
 
     def get_context_data(self, pk, **kwargs):
-        partners = Partners.objects.all()
+
         table = Tables.objects.filter(pk=pk).first()
         ctx = super(TableView, self).get_context_data(**kwargs)
         ctx['partners'] = partners

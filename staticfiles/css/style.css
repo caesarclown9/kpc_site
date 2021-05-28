@@ -2073,32 +2073,6 @@
    }
  }
  
- /* Small Mobile :320px. */
- 
- @media only screen and (max-width: 479px) {
-   .hero-item h2 {
-     font-size: 50px;
-   }
-   .hero-item h2 span:nth-child(1) {
-     color: #081624;
-     padding-right: 15px;
-   }
-   .map-section {
-     padding-bottom: 0;
-   }
-   .map-info {
-     max-width: 100%;
-   }
-   .map {
-     position: relative;
-     height: 400px;
-     margin-top: 70px;
-   }
-   .footer-menu li a {
-     margin-left: 0;
-     padding: 13px 10px;
-   }
- }
  
 
 
@@ -2201,13 +2175,7 @@ margin-top: 20px;
   padding: 0 8px;
 }
 
-/* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
-  .column-leader {
-    width: 100%;
-    display: block;
-  }
-}
+
 
 /* Add some shadows to create a card effect */
 .card-leader {
@@ -2230,17 +2198,6 @@ margin-top: 20px;
   color: grey;
 }
 
-/* .button-leader {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-} */
 
 .button-leader:hover {
   background-color: #555;

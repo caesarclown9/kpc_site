@@ -113,36 +113,28 @@
 					{% endfor %}
 				</tbody>
 			</table>
-			<!-- <div class="col-lg-6">
-				<h3 style='padding: 20px'>Планы Компании</h3>
-				<div class="list-group" style='margin-bottom: 50px'>
-					{% for p in plans %}
-					<a href="{% url 'crud:plan_detail' pk=p.pk %}" class="list-group-item list-group-item-action">
-						{{ p.title }}
-					</a>
-					{% endfor %}
-				</div>
-			</div> -->
 		</div>
 	</div>
-    	<!-- Footer section -->
+
+
+	<!-- Footer section -->
 	<footer class="footer-section spad">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
-					<div class="footer-widget about-widget">
-						<h4 style='color:#ffc600'>ЗАО "Кыргыз Петролеум Компани"</h4>
-						<p> - является первым интегриро- ванным нефтедобытчиком, пере- работчиком и продавцом нефте- продуктов в КР.</p>
+					<div class="footer-widget about-widget" style='margin-left: -30px; width: 350px'>
+						<h5 style='color:#ffc600'>ЗАО "Кыргыз Петролеум Компани"</h5>
+						<p> - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="footer-widget">
-						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
-						<ul>
-							{% for p in partners %}
-								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
-							{% endfor %}
-						</ul>					</div>
+					<div class="footer-widget" style='margin-left: 50px'>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Присоединиться</h2>
+						<div class="footer-social">
+							<a href="" style='height:35px; width:35px'><i class="fa fa-facebook"></i></a>
+							<a href="" style='height:35px; width:35px'><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
 					<div class="footer-widget">

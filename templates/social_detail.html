@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>{{ plans.title }} - Kyrgyz Petroleum Company</title>
+	<title>Kyrgyz Petroleum Company</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
@@ -79,10 +79,10 @@
 	</header>
 	<!-- Header section end  -->
 
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style='width: 900px; margin-top:150px; margin-left: 200px; margin-bottom: 100px'>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style='width: 900px; margin-top:150px; margin-left: 200px; margin-bottom: 100px'>
 		<div class="carousel-inner">
 			<div class="carousel-item active" style='max-height: 400px'>
-				<img class="d-block w-100" src="{{plans.image.url}}" alt="First slide">
+				<img class="d-block w-100" src="{{social.image.url}}" alt="First slide">
 			</div>
 			{% for p in photos %}
 				<div class="carousel-item" style='max-height: 400px'>
@@ -99,14 +99,14 @@
 		  <span class="sr-only">Next</span>
 		</a>
 	  </div>
-	<div style='text-align: center; margin-left: 180px; margin-right: 160px; margin-bottom: 50px'>
-		<h3 style='padding-bottom:30px'>{{ plans.title }}</h3>
-		<span>{{ plans.body }}</span>
-	</div>
+
+	  <div style='text-align: center; margin-left: 180px; margin-right: 160px; margin-bottom: 50px'>
+		  <h3 style='padding-bottom:30px'>{{ social.title }}</h3>
+		  <span>{{ social.body }}</span>
+	  </div>
 
 
-
-	<!-- Footer section -->
+    	<!-- Footer section -->
 	<footer class="footer-section spad">
 		<div class="container">
 			<div class="row">

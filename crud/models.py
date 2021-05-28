@@ -24,6 +24,28 @@ class NewsImage(models.Model):
         return self.news.title
 
 
+class Social(models.Model):
+    title = models.CharField(max_length=200,verbose_name='Заголовок')
+    body = models.TextField(verbose_name='Текст')
+    image = models.FileField(blank=True, null=True,verbose_name='Картинка')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Социальная ответственность'
+        verbose_name_plural = 'Социальная ответственность'
+
+
+class SocialImage(models.Model):
+    social = models.ForeignKey(Social, on_delete=models.CASCADE)
+    images = models.ImageField(upload_to='social/news/')
+
+    def __str__(self):
+        return self.social.title
+
 class Rates(models.Model):
     date = models.DateField(auto_now=True)
     price1 = models.DecimalField(max_digits=20, decimal_places=2, verbose_name='Цена аи-80 нал', blank=True, null=True)
@@ -52,6 +74,7 @@ class Leaders(models.Model):
     position = models.CharField(max_length=50, verbose_name="Должность")
     body = models.TextField(verbose_name='Описание')
     image = models.ImageField(verbose_name="Фотография")
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
 
 
     def __str__(self):

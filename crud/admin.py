@@ -14,6 +14,17 @@ class NewsAdmin(admin.ModelAdmin):
         model = News
 
 
+class SocialImageAdmin(admin.StackedInline):
+    model = SocialImage
+
+
+@admin.register(Social)
+class SocialAdmin(admin.ModelAdmin):
+    inlines = [SocialImageAdmin]
+
+    class Meta:
+        model = Social
+
 
 class PlansImageAdmin(admin.StackedInline):
     model = PlansImage

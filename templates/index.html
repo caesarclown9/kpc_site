@@ -129,22 +129,21 @@
 	<!-- Features section   -->
 	<section class="section gray-bg" id="blog" style="height: 700px; margin-top:100px">
 		<div class="container">
-			<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_news' %}" style='color:white'>Все Новости</a></h4></button>
 			<div class="row">
-				{% for post in news %}
 				<div class="col-lg-4">
 					<div class="blog-grid">
-						<div class="blog-img">
-							<div class="date">{{ post.created_at|date:"F d Y" }}</div>
-							<a href="{% url 'crud:news_detail' pk=post.pk %}">
-								<img style='width:380px; height:300px' src="{{ post.image.url}}" title="" alt="">
+						<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_news' %}" style='color:white'>Все Новости</a></h4></button>
+						<div class="blog-img" style='margin-top: 10px;'>
+							<div class="date">{{ news.created_at|date:"F d Y" }}</div>
+							<a href="{% url 'crud:news_detail' pk=news.pk %}">
+								<img style='width:380px; height:300px' src="{{ news.image.url}}" title="" alt="">
 							</a>
 						</div>
 						<div class="blog-info" style='height:200px'>
-							<h5>{{ post.title|truncatechars:30 }}</h5>
-							<p>{{ post.body|truncatechars:45 }}</p>
+							<h5>{{ news.title|truncatechars:30 }}</h5>
+							<p>{{ news.body|truncatechars:45 }}</p>
 							<div class="btn-bar" style='position:absolute; bottom: 10px'>
-								<a href="{% url 'crud:news_detail' pk=post.pk %}" class="px-btn-arrow">
+								<a href="{% url 'crud:news_detail' pk=news.pk %}" class="px-btn-arrow">
 									<span>Подробнее</span>
 									<i class="arrow"></i>
 								</a>
@@ -152,7 +151,46 @@
 						</div>
 					</div>
 				</div>
-				{% endfor %}
+				<div class="col-lg-4">
+					<div class="blog-grid">
+						<button type="button" class="btn btn-danger"><h4 style='font-size: 22px'><a href="{% url 'crud:all_social' %}" style='color:white'>Социальная Ответственность</a></h4></button>
+						<div class="blog-img" style='margin-top: 10px;'>
+							<a href="{% url 'crud:social_detail' pk=social.pk %}">
+								<img style='width:380px; height:300px' src="{{ social.image.url}}" title="" alt="">
+							</a>
+						</div>
+						<div class="blog-info" style='height:200px'>
+							<h5>{{ social.title|truncatechars:30 }}</h5>
+							<p>{{ social.body|truncatechars:45 }}</p>
+							<div class="btn-bar" style='position:absolute; bottom: 10px'>
+								<a href="{% url 'crud:social_detail' pk=social.pk %}" class="px-btn-arrow">
+									<span>Подробнее</span>
+									<i class="arrow"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="blog-grid">
+						<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_leaders' %}" style='color:white'>Наши Люди</a></h4></button>
+						<div class="blog-img" style='margin-top: 10px;'>
+							<a href="{% url 'crud:leader_detail' pk=leader.pk %}">
+								<img style='width:380px; height:300px' src="{{ leader.image.url}}" title="" alt="">
+							</a>
+						</div>
+						<div class="blog-info" style='height:200px'>
+							<h5>{{ leader.lastname}} {{ leader.firstname }} {{leader.midname}}</h5>
+							<p>{{ leader.body|truncatechars:45 }}</p>
+							<div class="btn-bar" style='position:absolute; bottom: 10px'>
+								<a href="{% url 'crud:leader_detail' pk=leader.pk %}" class="px-btn-arrow">
+									<span>Подробнее</span>
+									<i class="arrow"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -202,19 +240,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
-					<div class="footer-widget about-widget">
-						<h4 style='color:#ffc600'>ЗАО "Кыргыз Петролеум Компани"</h4>
-						<p> - является первым интегриро- ванным нефтедобытчиком, пере- работчиком и продавцом нефте- продуктов в КР.</p>
+					<div class="footer-widget about-widget" style='margin-left: -30px; width: 350px'>
+						<h5 style='color:#ffc600'>ЗАО "Кыргыз Петролеум Компани"</h5>
+						<p> - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="footer-widget">
-						<h2 class="fw-title" style='margin-bottom: 60px'>Наши Партнеры</h2>
-						<ul>
-							{% for p in partners %}
-								<li><p><a href="{{p.link}}"><strong style='color:white'>{{ p.name }}</strong></a></p></li>
-							{% endfor %}
-						</ul>
+					<div class="footer-widget" style='margin-left: 50px'>
+						<h2 class="fw-title" style='margin-bottom: 60px'>Присоединиться</h2>
+						<div class="footer-social">
+							<a href="" style='height:35px; width:35px'><i class="fa fa-facebook"></i></a>
+							<a href="" style='height:35px; width:35px'><i class="fa fa-instagram"></i></a>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6">
