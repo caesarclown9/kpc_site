@@ -571,7 +571,8 @@
  }
  
  .site-nav-menu ul li:hover a:after {
-   width: 100%;
+   width: 90%;
+   margin-left: 5px
  }
  
  .site-nav-menu ul li:hover .sub-menu {
@@ -582,7 +583,8 @@
  }
  
  .site-nav-menu ul li.active a:after {
-   width: 100%;
+   width: 90%;
+   margin-left: 5px;
  }
  
  .slicknav_menu {
