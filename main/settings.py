@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['195.38.164.24', 'kpc.kg', 'www.kpc.kg']
 
 
 # Application definition
@@ -78,11 +78,12 @@ WSGI_APPLICATION = 'main.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD')
-
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'kpc',
+        'USER': 'kpcuser',
+        'PASSWORD': 'kpcuserpassword',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
