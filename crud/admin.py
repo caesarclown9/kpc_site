@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 
 from .models import *
 
@@ -7,8 +8,9 @@ class NewsImageAdmin(admin.StackedInline):
 
 
 @admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(TranslationAdmin):
     inlines = [NewsImageAdmin]
+
 
     class Meta:
         model = News

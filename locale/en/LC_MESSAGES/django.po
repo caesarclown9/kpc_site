@@ -1,0 +1,840 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-16 15:15+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+#: templates/about.html:4
+msgid "О Компании"
+msgstr "About us"
+
+#: templates/about.html:9 templates/base.html:73 templates/index.html:5
+#: templates/partners.html:9
+msgid "Главная"
+msgstr "Main"
+
+#: templates/about.html:10 templates/base.html:74 templates/index.html:6
+#: templates/partners.html:10
+msgid "О нас"
+msgstr "About us"
+
+#: templates/about.html:11 templates/base.html:75 templates/index.html:7
+#: templates/partners.html:4 templates/partners.html:11
+#: templates/partners.html:22
+msgid "Для Клиентов и Партнеров"
+msgstr "For Clients and Partners"
+
+#: templates/about.html:22
+msgid ""
+"ЗАО \"Кыргыз Петролеум Компани\" - является первым интегрированным "
+"нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР."
+msgstr ""
+"CJSC Kyrgyz Petroleum Company - is the first integrated"
+"an oil producer, refiner and seller of petroleum products in the Kyrgyz Republic."
+
+#: templates/about.html:23
+msgid "Руководство Компании"
+msgstr "Company management"
+
+#: templates/about.html:44 templates/partners.html:42
+msgid "Краткая информация: "
+msgstr "Brief information: "
+
+#: templates/about.html:46
+#, python-format
+msgid ""
+"Единственным акционером Закрытого акционерного общества «Кыргыз Петролеум "
+"Компани» (ЗАО «КПК» или Компания) является ОАО «Кыргызнефтегаз» (ОАО «КНГ») "
+"которая на данный момент владеет 100 %% акций Компании. Компания занимается "
+"производством нефтепродуктов из нефти и других видов сырья и предоставляет "
+"услуги по переработке. На данный момент предприятие производит 3 вида "
+"продукции: бензин, дизель, мазут.НПЗ (нефтеперерабатывающий завод) ЗАО «КПК» "
+"спроектирован для переработки 500,000 тонн сырой нефти в год и несколько "
+"меньшего объема альтернативного сырья, такого как газовый конденсат, "
+"дистилляты, некондиционные нефтепродукты.  Основным партнером Компании "
+"является предприятие - владелец ОАО «Кыргызнефтегаз». Руководством Компании "
+"полностью обеспечен количественный и качественный состав предприятия. "
+"Следует отметить что ЗАО «КПК» является одним из значимых "
+"налогоплательщиков  в Жалал-Абадской  области. Высшим органом управления "
+"предприятия является Общее Собрание Акционеров, с правом принятия решения по "
+"всем вопросам деятельности Компании. Далее по иерархии управления стоит "
+"Совет Директоров. Совет Директоров осуществляет общее руководство "
+"деятельностью Компании, за исключением вопросов, отнесенных "
+"законодательством к исключительной компетенции общего собрания акционеров. "
+"Повседневное управление Компанией осуществляется исполнительным органом, в "
+"лице Президента Компании, избираемого Советом Директоров."
+msgstr ""
+"The sole shareholder of the Closed Joint Stock Company Kyrgyz Petroleum "
+"Company (CJSC KPC or Company) is OJSC Kyrgyzneftegaz (OJSC KNG) "
+"which currently owns 100 %% of the shares of the Company. The company is engaged in"
+"the production of petroleum products from oil and other raw materials and provides"
+"processing services. At the moment the company produces 3 types"
+"products: gasoline, diesel, fuel oil. NPZ (oil refinery) CJSC KPC "
+"designed to process 500,000 tons of crude oil per year and several"
+"less volume of alternative feedstock such as gas condensate,"
+"distillates, substandard oil products. The main partner of the Company"
+"is an enterprise - the owner of OJSC Kyrgyzneftegaz . The management of the Company"
+"the quantitative and qualitative composition of the enterprise is fully ensured."
+"It should be noted that CJSC KPC is one of the most significant"
+"taxpayers in the Jalal-Abad region. The supreme governing body"
+"the enterprise is the General Meeting of Shareholders, with the right to make decisions on"
+"on all issues of the Company's activities. Next in the management hierarchy is"
+"Board of Directors. The Board of Directors provides general management"
+"the activities of the Company, excluding matters referred to"
+"by legislation to the exclusive competence of the general meeting of shareholders."
+"The day-to-day management of the Company is carried out by the executive body, in"
+"the face of the President of the Company, elected by the Board of Directors."
+
+#: templates/about.html:60
+msgid "История Компании"
+msgstr "History of the company"
+
+#: templates/about.html:61
+#, python-format
+msgid ""
+"Истоки Компании уходят в далекий 1995 год. Между открытым акционерным "
+"обществом  «Кыргызнефтегаз» и акционерным обществом с ограниченной "
+"ответственностью «ПетроКыргызстан» (Джерси) была достигнута договоренность о "
+"создании совместного предприятия ЗАО «Кыргыз Петролеум Компани». Доли акции "
+"между участниками данной сделки распределились 50/50. После подписания "
+"Инвестиционного соглашения с Правительством Кыргызской Республики в декабре "
+"1995 года, иностранный инвестор обеспечил инвестиционные средства для "
+"финансирования обязательств по Инвестиционному соглашению, включая "
+"первоначальный вклад для строительства нефтеперерабатывающего завода (НПЗ) и "
+"разработки нефтяных месторождений. Строительство НПЗ в городе Жалал-Абад "
+"началось в январе 1996 года, и было завершено в установленные сроки - в "
+"сентябре 1996 года. Нефтеперерабатывающий завод ЗАО «КПК» был торжественно "
+"открыт 6 октября 1996 года. В июне 1996 года Компания начала разработку "
+"месторождений с использованием специального оборудования, необходимого для "
+"данной деятельности в Кыргызской Республике. Предварительная техническая "
+"оценка месторождений показала, что гидравлический разрыв нефтенесущих "
+"пластов является наиболее эффективным и выгодным методом улучшения "
+"нефтедобычи. Тестовая программа, включающая 21 нефтяную скважину, началась в "
+"октябре 1996 года. К концу 1996 года, инвестор полностью выполнил "
+"обязательства по вложению объема средств объема средств, предусмотренных как "
+"обязательство по документам Компании, и продолжал инвестировать в развитие "
+"НПЗ и месторождений. В тоже время были установлены дополнительные резервуары "
+"и погрузочное оборудование для приспособления НПЗ к новым условиям. Новые "
+"технические усовершенствования на НПЗ были проведены в 1998-2001 годах для "
+"увеличения октанового числа производимого бензина. Это было вызвано "
+"увеличением количества иностранных современных машин, импортируемых в "
+"Кыргызстан. В 2012 году Компания приостановила деятельность по добыче нефти "
+"из собственных скважин и сконцентрировала свое внимание на переработке нефти "
+"и других видов сырья. 6 ноября 2012 года стало исторической датой для "
+"Компании. В этот день были полностью оформлены все необходимые документы по "
+"покупке  ОАО «Кыргызнефтегаз»  50%% акций принадлежащих «Петро Кыргызстан "
+"ЛТД». Таким образом, ОАО «Кыргызнефтегаз» стал единственным акционером ЗАО "
+"«Кыргыз Петролеум Компани». После приобретения ЗАО «Кыргыз Петролеум "
+"Компани», ОАО «Кыргызнефтегаз» стал единственным предприятием, которое имеет "
+"законченный цикл производства, начиная от геологоразведочных работ и добычи "
+"нефти и заканчивая производством и реализацией нефтепродуктов. Взамен "
+"иностранным специалистам, которые прекратили свою работу в Компании, пришли "
+"местные специалисты, имеющие достаточный набор знаний, умений и навыков. "
+"Сотрудниками предприятия в марте 2012 года создана «Первичная Профсоюзная "
+"организация», которая прошла регистрацию в органах юстиции КР в 2016г., и в "
+"настоящее время стала самостоятельной общественной профсоюзной организацией "
+"и входит в Ассоциацию профсоюзов ОАО «КНГ». В 2016 году Компания претерпела "
+"определенные структурные изменения. Была частично оптимизирована "
+"организационная структура предприятия, проводятся меры по модернизации "
+"производства. Перед Компанией ставятся смелые задачи и разносторонний "
+"комплекс мер по развитию предприятия."
+msgstr ""
+"The origins of the Company go back to 1995. Between open joint-stock"
+"company Kyrgyzneftegaz and joint stock company with limited"
+"the responsibility of PetroKyrgyzstan (Jersey) has reached an agreement on"
+"creation of a joint venture CJSC Kyrgyz Petroleum Company. Shares of shares"
+"50/50 were distributed between the participants in this transaction. After signing"
+"Investment Agreement with the Government of the Kyrgyz Republic in December"
+"1995, a foreign investor provided investment funds for"
+"financing liabilities under the Investment Agreement, including"
+"initial contribution for the construction of a refinery (refinery) and"
+"development of oil fields. Construction of an oil refinery in the city of Jalal-Abad"
+"started in January 1996 and was completed on time - in"
+"September 1996. Oil refinery CJSC KPC was solemnly"
+"opened on October 6, 1996. In June 1996, the Company began developing"
+"deposits using special equipment required for"
+"this activity in the Kyrgyz Republic. Preliminary technical"
+"field assessment showed that hydraulic fracturing of oil-bearing"
+"reservoirs are the most efficient and profitable improvement method"
+"oil production. Test program, including 21 oil wells, began in"
+"October 1996. By the end of 1996, the investor has fully complied with"
+"commitments to invest the amount of funds of the amount of funds provided as"
+"commitment by the documents of the Company, and continued to invest in development"
+"Refineries and fields. At the same time, additional tanks were installed"
+"and loading equipment to adapt the refinery to new conditions. New"
+"technical improvements at the refinery were carried out in 1998-2001 for"
+"an increase in the octane number of gasoline produced. This was caused by"
+"an increase in the number of foreign modern cars imported into"
+"Kyrgyzstan. In 2012, the Company suspended its oil production activities"
+"from our own wells and focused on oil refining"
+"and other raw materials. November 6, 2012 was a historic date for"
+"Companies. On this day, all the necessary documents for"
+"purchase of OJSC Kyrgyzneftegaz 50%% of shares owned by Petro Kyrgyzstan "
+"LTD. Thus, OJSC Kyrgyzneftegaz became the sole shareholder of CJSC "
+"Kyrgyz Petroleum Company. After the acquisition of Kyrgyz Petroleum CJSC"
+"Company, OJSC Kyrgyzneftegaz became the only enterprise that has "
+"a complete production cycle, starting from exploration and production"
+"oil and ending with the production and sale of oil products. In exchange"
+"foreign specialists who quit their work in the Company came to"
+"local specialists with a sufficient set of knowledge, skills and abilities."
+"Employees of the enterprise in March 2012 created Primary Trade Union "
+"organization, which was registered with the justice authorities of the Kyrgyz Republic in 2016, and in "
+"has now become an independent public trade union organization"
+"and is a member of the Association of Trade Unions of OJSC KNG. In 2016, the Company underwent"
+"certain structural changes. Has been partially optimized"
+"organizational structure of the enterprise, modernization measures are being taken"
+"production. The Company has ambitious and versatile tasks."
+"a set of measures for the development of the enterprise."
+
+
+
+#: templates/about.html:93
+msgid ""
+"Специалистами предприятия разработана стратегия организационно-технического "
+"развития  компании на ближайшую перспективу, в рамках которой планируется "
+"модернизация завода с установкой процессов вторичной переработки мазута с "
+"увеличением глубины отбора, а также вторичной переработки нафты по "
+"увеличению октанового числа. Данные меры направлены, прежде всего, для "
+"соответствия продукции международным стандартам. Данная технология позволит "
+"предприятию увеличить глубину отбора светлых фракций из имеющегося сырья, "
+"что в конечном итоге увеличит денежные потоки на предприятии и повысит "
+"привлекательность переработки сырья на НПЗ Компании для ее клиентов. В "
+"рамках повышения квалификации персонала на 2017 год планируется провести ряд "
+"мероприятий направленных на повышения уровня знаний и умений работников "
+"предприятия. Планируется увеличить объем производства продукции, при "
+"сохранении текущего уровня потерь. Все финансовые показатели планируется "
+"держать на оптимальном уровне и провести организационно-технические "
+"мероприятия по оптимизации затрат. Компания  и в дальнейшем собирается "
+"прилагать все усилия направленные на эффективное производство продукции и "
+"динамичное развитие предприятия с учетом современных требований и изменений "
+"в нефтеперерабатывающей отрасли, повышение качества и тесное сотрудничество "
+"с партнерами."
+msgstr ""
+"The companys specialists have developed an organizational and technical strategy"
+"development of the company in the near future, within which it is planned"
+"modernization of the plant with the installation of processes for the secondary processing of fuel oil from"
+"increasing the depth of selection, as well as recycling naphtha by"
+"to increase the octane number. These measures are aimed primarily at"
+"conformity of products to international standards. This technology will allow"
+"for the enterprise to increase the depth of selection of light fractions from available raw materials,"
+"which will ultimately increase cash flows at the enterprise and increase"
+"the attractiveness of processing raw materials at the Companys refineries for its customers."
+"within the framework of personnel training for 2017, it is planned to conduct a number of"
+"activities aimed at increasing the level of knowledge and skills of employees"
+"enterprises. It is planned to increase the volume of production, with"
+"maintaining the current level of losses. All financial indicators are planned."
+"keep at the optimal level and carry out organizational and technical"
+"measures to optimize costs. The company is going to continue"
+"make every effort to produce products efficiently and"
+"dynamic development of the enterprise, taking into account modern requirements and changes"
+"in the oil refining industry, quality improvement and close cooperation"
+"with partners."
+
+#: templates/all_leaders.html:4 templates/index.html:107
+msgid "Наши Люди"
+msgstr "Company management"
+
+#: templates/all_prices.html:4
+msgid "Все Цены"
+msgstr "All Prices"
+
+#: templates/all_prices.html:22 templates/all_prices.html:25
+#: templates/news_list.html:41 templates/news_list.html:44
+msgid "Пред"
+msgstr "Prev"
+
+#: templates/all_prices.html:39 templates/all_prices.html:42
+#: templates/news_list.html:58 templates/news_list.html:61
+msgid "След"
+msgstr "Next"
+
+#: templates/all_social.html:4 templates/index.html:87
+msgid "Социальная Ответственность"
+msgstr "Social Responsibility"
+
+#: templates/all_social.html:11
+msgid "Социальная Ответсвенность"
+msgstr "Social Responsibility"
+
+#: templates/all_social.html:26 templates/index.html:78 templates/index.html:98
+#: templates/index.html:118 templates/news_list.html:27
+msgid "Подробнее"
+msgstr "Details"
+
+#: templates/base.html:64 templates/base.html:143
+msgid "улица Промышленная 202"
+msgstr "202, Promushlennaya str."
+
+#: templates/base.html:65 templates/base.html:143
+msgid "город Жалал-Абад, 715600"
+msgstr "715600, Jalal-Abad"
+
+#: templates/base.html:80
+msgid "ЗАО <<Кыргыз Петролеум Компани>>"
+msgstr "CJSC Kyrgyz Petroleum Company"
+
+#: templates/base.html:94
+msgid "Выбрать"
+msgstr "Go"
+
+#: templates/base.html:109
+msgid "ЗАО \"Кыргыз Петролеум Компани\""
+msgstr "CJSC Kyrgyz Petroleum Company"
+
+#: templates/base.html:110
+msgid ""
+" - является первым интегрированным нефтедобытчиком, переработчиком и "
+"продавцом нефтепродуктов в КР."
+msgstr ""
+"- is the first integrated oil producer, refiner and "
+"seller of petroleum products in the Kyrgyz Republic."
+
+#: templates/base.html:115
+msgid "Присоединиться"
+msgstr "Follow"
+
+#: templates/base.html:124
+msgid "Телефонные Номера (+996 3722)"
+msgstr "Phone Numbers (+996 3722)"
+
+#: templates/base.html:126
+msgid "Приемная Президента"
+msgstr "President Reception"
+
+#: templates/base.html:127
+msgid "Факс"
+msgstr "Fax"
+
+#: templates/base.html:128
+msgid "Управляющий НПЗ"
+msgstr "Refinery manager"
+
+#: templates/base.html:129
+msgid "Комната Управления НПЗ"
+msgstr "Refinery Control Room"
+
+#: templates/base.html:130
+msgid "Бухгалтерия"
+msgstr "Accounting department"
+
+#: templates/base.html:137
+msgid "Контакты"
+msgstr "Contacts"
+
+#: templates/ecology.html:4 templates/index.html:140
+msgid "Политика охраны окружающей среды"
+msgstr "Environmental policy"
+
+#: templates/ecology.html:13
+msgid "Политика охраны окружающей среды, охраны труда и отношений с партнерами"
+msgstr "Environmental protection, labor protection and relations with partners policy"
+
+#: templates/ecology.html:30
+msgid ""
+"ПОЛИТИКА в области качества, охраны здоровья и окружающей среды, обеспечения "
+"безопасности труда нефтеперерабатывающего завода ЗАО «Кыргыз Петролеум "
+"Компани»"
+msgstr ""
+"POLICY in the field of quality, health and environment, assurance"
+"labor safety of the oil refinery CJSC Kyrgyz Petroleum "
+"Company"
+
+#: templates/ecology.html:36
+msgid ""
+"Нефтеперерабатывающий завод ЗАО «Кыргыз Петролеум Компани» - одно из  "
+"динамично развивающихся предприятий в Кыргызской Республике по переработке "
+"углеводородного сырья и производству нефтепродуктов. Основная цель "
+"предприятия - выпуск и поставка конкурентоспособной продукции, "
+"удовлетворяющей требованиям потребителей и получение устойчивой прибыли для "
+"дальнейшего развития производства в интересах потребителей и общества, а "
+"также обеспечение безопасных условий труда и минимизация экологических "
+"воздействий. Повышение качества выпускаемой продукции решающий фактор "
+"условий её конкурентоспособности на внутреннем и внешнем рынках."
+msgstr ""
+"The oil refinery of CJSC Kyrgyz Petroleum Company is one of the"
+"dynamically developing processing enterprises in the Kyrgyz Republic"
+"hydrocarbon raw materials and the production of petroleum products. The main goal"
+"enterprises - production and delivery of competitive products,"
+"satisfying customer requirements and generating sustainable profits for"
+"further development of production in the interests of consumers and society, and"
+"also ensuring safe working conditions and minimizing environmental"
+"impacts. Improving the quality of products is a decisive factor"
+"the conditions of its competitiveness in the domestic and foreign markets."
+
+#: templates/ecology.html:48
+msgid ""
+"Основными направлениями своей Политики руководство ЗАО «КПК» определяет "
+"следующее: "
+msgstr ""
+"The main directions of its Policy are determined by the management of CJSC KPC"
+"the following: "
+
+#: templates/ecology.html:49
+msgid "Поставщик:"
+msgstr "Provider:"
+
+#: templates/ecology.html:49
+msgid ""
+" - взаимовыгодные отношения с поставщиками в целях обеспечения стабильности "
+"и ритмичности поставки сырья и товарно-материальных ценностей."
+msgstr ""
+"- mutually beneficial relationships with suppliers in order to ensure stability"
+"and the rhythm of the supply of raw materials and inventories."
+
+#: templates/ecology.html:50
+msgid "Потребитель: "
+msgstr "Consumer: "
+
+#: templates/ecology.html:50
+msgid ""
+" - постоянное повышение удовлетворенности потребителя путем изучения и "
+"анализа потребительского рынка нефтепродуктов по ассортименту и качеству с "
+"учетом опережения потребительского спроса."
+msgstr ""
+"- continually improving customer satisfaction through research and"
+"analysis of the consumer market of petroleum products by assortment and quality with"
+"taking into account the outstripping consumer demand."
+
+#: templates/ecology.html:51
+msgid "Государство и общество:"
+msgstr "State and Society"
+
+#: templates/ecology.html:51
+msgid ""
+" - неукоснительное выполнение законодательных актов правительственных и "
+"надзорных органов по обеспечению качества продукции, охраны труда и охраны "
+"окружающей среды;"
+msgstr ""
+"- the strict implementation of legislative acts of government and"
+"supervisory authorities to ensure product quality, health and safety"
+"environment;"
+
+#: templates/ecology.html:52
+msgid "- активное участие в реализации государственных и отраслевых программ;"
+msgstr "- active participation in the implementation of government and industry programs;"
+
+#: templates/ecology.html:53
+msgid "- оказание содействия развитию и благосостоянию общества."
+msgstr "- rendering assistance to the development and well-being of society."
+
+#: templates/ecology.html:54
+msgid "Персонал:"
+msgstr "Staff:"
+
+#: templates/ecology.html:54
+msgid " - постоянное повышение квалификации и мотивации сотрудников; "
+msgstr "- continuous professional development and motivation of employees;"
+
+#: templates/ecology.html:55
+msgid ""
+"- повышение ответственности персонала за выполнение законодательных, "
+"нормативных и других требований."
+msgstr ""
+"- increasing the responsibility of personnel for the implementation of legislative,"
+"regulatory and other requirements."
+
+#: templates/ecology.html:56
+msgid "Безопасность и условия труда:"
+msgstr "Safety and working conditions:"
+
+#: templates/ecology.html:56
+msgid ""
+" - организация контроля по выполнению требований охраны труда и обеспечение "
+"средствами защиты работающих;"
+msgstr ""
+"- organization of control over the fulfillment of labor protection requirements and ensuring"
+"means of protection of workers;"
+
+#: templates/ecology.html:57
+msgid ""
+"- профессиональный отбор и обучение сотрудников работающих на предприятии;"
+msgstr "- professional selection and training of employees working at the enterprise;"
+
+#: templates/ecology.html:58
+msgid "- улучшение инфраструктуры нефтеперерабатывающего завода;"
+msgstr "- improvement of the refinery infrastructure;"
+
+#: templates/ecology.html:59
+msgid "- снижение уровня заболеваемости и травматизма."
+msgstr "- decrease in the level of morbidity and traumatism."
+
+#: templates/ecology.html:60
+msgid "Окружающая среда:"
+msgstr "Environment:"
+
+#: templates/ecology.html:60
+msgid ""
+" - снижение негативного воздействия деятельности завода на экологию путем "
+"обновления морально устаревшего оборудования, технологических процессов и "
+"используемых материалов;"
+msgstr ""
+"- reducing the negative impact of the plant on the environment by"
+"renewal of obsolete equipment, technological processes and"
+"materials used;"
+
+#: templates/ecology.html:61
+msgid "- выпуск экологически безопасной продукции;"
+msgstr "- release of environmentally friendly products;"
+
+#: templates/ecology.html:62
+msgid "- рациональное использование природных ресурсов."
+msgstr "- rational use of natural resources."
+
+#: templates/ecology.html:63
+msgid "Постоянное улучшение:"
+msgstr "Continuous improvement:"
+
+#: templates/ecology.html:63
+msgid ""
+" - повышение эффективности функционирования систем менеджмента качества, "
+"интегрированной системы менеджмента;"
+msgstr ""
+"- improving the efficiency of the quality management systems,"
+"an integrated management system;"
+
+#: templates/ecology.html:64
+msgid ""
+"- модернизация технологических процессов и оборудования, внедрение новой "
+"техники и технологий;"
+msgstr ""
+"- modernization of technological processes and equipment, introduction of a new"
+"techniques and technologies;"
+
+#: templates/ecology.html:65
+msgid ""
+"- непрерывный мониторинг качества продукции, состояния здоровья работающих, "
+"условий труда, техники безопасности и охраны окружающей среды путем "
+"своевременного и результативного устранения несоответствий."
+msgstr ""
+"- continuous monitoring of product quality, health status of workers,"
+"working conditions, safety and environmental protection by"
+"timely and effective elimination of nonconformities."
+
+#: templates/ecology.html:68
+msgid ""
+"Для достижения поставленных задач данной Политики руководство Компании берет "
+"на себя обязательства:"
+msgstr ""
+"To achieve the objectives of this Policy, the Company's management takes"
+"commitments:"
+
+#: templates/ecology.html:69
+msgid ""
+"- выполнять все продекларированные положения настоящей Политики в области "
+"качества, охраны здоровья, обеспечения безопасности труда и охраны "
+"окружающей среды;"
+msgstr ""
+"- to comply with all the declared provisions of this Policy in the field of"
+"quality, health protection, labor safety and protection"
+"environment;"
+
+#: templates/ecology.html:70
+msgid ""
+"- обеспечивать выполнение законодательных и нормативных актов о труде и "
+"охраны окружающей среды Кыргызской Республики;"
+msgstr ""
+"- to ensure the implementation of legislative and regulatory acts on labor and"
+"environmental protection of the Kyrgyz Republic;"
+
+#: templates/ecology.html:71
+msgid ""
+"- постоянно повышать результативность системы менеджмента качества и "
+"интегрированной системы менеджмента;"
+msgstr ""
+"- to constantly improve the effectiveness of the quality management system and"
+"an integrated management system;"
+
+#: templates/ecology.html:72
+msgid ""
+"- совершенствовать систему производственного экологического контроля за "
+"соблюдением нормативов выбросов и сбросов, а также правил обращения с "
+"отходами производства и рационального использования энергоресурсов;"
+msgstr ""
+"- to improve the system of industrial environmental control for"
+"compliance with emission and discharge standards, as well as the rules for handling"
+"production waste and rational use of energy resources;"
+
+#: templates/ecology.html:73
+msgid ""
+"- обеспечивать улучшение условий на рабочих местах, внедрять эффективные "
+"средства и методы по повышению безопасности труда, предупреждению "
+"заболеваемости, производственного травматизма и аварий;"
+msgstr ""
+"- to ensure the improvement of working conditions, to introduce effective"
+"means and methods to improve labor safety, prevention"
+"morbidity, industrial injuries and accidents;"
+
+#: templates/ecology.html:74
+msgid ""
+"- поддерживать открытый диалог со всеми заинтересованными сторонами по "
+"вопросам менеджмента качества, охраны здоровья, обеспечения безопасности "
+"труда и охраны окружающей среды."
+msgstr ""
+"- maintain an open dialogue with all stakeholders on"
+"issues of quality management, health protection, safety assurance"
+"labor and environmental protection."
+
+#: templates/index.html:34
+msgid "Цены на Продукцию"
+msgstr "Product Prices"
+
+#: templates/index.html:40 templates/plans.html:4
+msgid "Достижения и Планы"
+msgstr "Achievements and Plans"
+
+#: templates/index.html:46
+msgid "Экология и Безопасность"
+msgstr "Ecology and Safety"
+
+#: templates/index.html:52 templates/testimonials.html:4
+msgid "Отзывы Клиентов"
+msgstr "Testimonials"
+
+#: templates/index.html:66 templates/news_list.html:11
+msgid "Все Новости"
+msgstr "All News"
+
+#: templates/index.html:137
+msgid "Безопасность и Экология"
+msgstr "Safety and Ecology"
+
+#: templates/index.html:153
+msgid "Безопасность и экология"
+msgstr "Safety and Ecology"
+
+#: templates/index.html:155
+msgid ""
+"От имени Совета Директоров «Кыргыз Петролеум Компани» мы подтверждаем наше "
+"обязательство достичь наивысшего уровня в охране здоровья, окружающей среды "
+"и безопасности во всех сферах нашей коммерческой и производственной "
+"деятельности. Данное обязательство основывается на истинных принципах "
+"бизнеса и является фундаментом системы административного управления. "
+"Наиболее важной частью нашей коммерческой деятельности является непрерывное "
+"совершенствование нашей деятельности и гарантия того, что безупречное "
+"обеспечение охраны здоровья, окружающей среды и безопасности будут признаны  "
+"нашими клиентами как одно из основных достоинств Компании. Нашей "
+"ответственностью и ответственностью каждого из работников «Кыргыз Петролеум "
+"Компани» совместно с теми, кто поддерживает нашу деятельность, является "
+"воплощение в жизнь этого обязательства по охране здоровья, окружающей среды "
+"и безопасности,  которое является ключевым элементом нашего бизнеса, и нам "
+"необходимо сделать его неотъемлемой частью всех сфер нашей деятельности. "
+"Каждый из нас исполняет определенную роль в достижении этой цели, поэтому мы "
+"все вместе будем принимать активное участие в исполнении данного "
+"обязательства по усовершенствованию и воплощению в жизнь нашей программы по "
+"охране здоровья, окружающей среды и безопасности, стремясь к полному "
+"отсутствию инцидентов."
+msgstr ""
+"On behalf of the Board of Directors of Kyrgyz Petroleum Company, we confirm our"
+"commitment to the highest level of health and environmental protection"
+"and safety in all areas of our commercial and industrial"
+"activity. This commitment is based on true principles."
+"business and is the foundation of the system of administrative management."
+"The most important part of our business is the continuous"
+"improving our performance and ensuring that impeccable"
+"health, safety and environmental protection will be recognized"
+"by our clients as one of the main advantages of the Company. Our"
+"responsibility and responsibility of each of the employees of Kyrgyz Petroleum "
+"Company together with those who support our activities is "
+"making this commitment to health, the environment a reality"
+"and security, which is a key element of our business, and us"
+"we need to make it an integral part of all areas of our business."
+"Each of us has a role to play in achieving this goal, so we are."
+"all together we will take an active part in the execution of this"
+"commitment to improve and implement our software program"
+"health, environment and safety by striving for complete"
+"no incidents."
+
+#: templates/news_list.html:4
+msgid "Все Новости - Kyrgyz Petroleum Company"
+msgstr "All News - Kyrgyz Petroleum Company"
+
+#: templates/partners.html:44
+msgid ""
+"Цели принципы и основные положения стандартизации в Кыргызской Республике "
+"установлены Законом Кыргызской Республики «Об основах технического "
+"регулирования в Кыргызской Республике» КМС 1.0 "
+msgstr ""
+"Objectives, principles and basic provisions of standardization in the Kyrgyz Republic"
+"established by the Law of the Kyrgyz Republic On the fundamentals of technical "
+"regulation in the Kyrgyz Republic CCM 1.0 "
+
+#: templates/partners.html:46
+msgid "Сведения о стандарте:"
+msgstr "Information about the standard:"
+
+
+#: templates/partners.html:48
+msgid ""
+"Разработан и внесен: Жалал-Абадским нефтеперерабатывающим заводом ЗАО "
+"«Кыргыз Петролеум Компани»."
+msgstr ""
+"Developed and introduced by: Jalal-Abad Oil Refinery CJSC"
+"Kyrgyz Petroleum Company."
+
+#: templates/partners.html:49
+msgid ""
+"Утвержден и введен в действие приказом «Центра по стандартизации и "
+"метрологии при министерстве экономики Кыргызской Республики» от 17 июля "
+"2013г., №53-СТ."
+msgstr ""
+"Approved and put into effect by the order of the Center for Standardization and "
+"Metrology under the Ministry of Economy of the Kyrgyz Republic dated July 17 "
+"2013, No. 53-ST."
+
+#: templates/partners.html:50
+msgid ""
+"В настоящем стандарте реализованы нормы законов КР: «Об основах технического "
+"регулирования в КР», «Об охране окружающей среды», «О санитарной-"
+"эпидемиологическом благополучии населения». "
+msgstr ""
+"This standard implements the norms of the laws of the Kyrgyz Republic: On the basics of technical "
+"regulation in the Kyrgyz Republic, On environmental protection, On sanitary-"
+"epidemiological well-being of the population."
+
+#: templates/partners.html:51
+msgid "Введен впервые."
+msgstr "Introduced for the first time."
+
+#: templates/partners.html:54
+msgid ""
+"Настоящий стандарт не может быть полностью или частично воспроизведен, "
+"тиражирован и распространен в качестве официального издания без разрешения."
+msgstr ""
+"This standard may not be reproduced in whole or in part,"
+"reproduced and distributed as an official publication without permission."
+
+#: templates/partners.html:55
+msgid "Примечание: "
+msgstr "Note:"
+
+#: templates/partners.html:55
+msgid ""
+"по производственной необходимости можно применять нормы указанные в графе "
+"«примечание» только в дополнительных условиях, путем «смешивание» с более "
+"низким содержанием определенных параметров, в условиях ЗАО «Кыргыз Петролеум "
+"Компани»."
+msgstr ""
+"for production needs, you can apply the standards specified in the column"
+" Note only in additional conditions, by mixing with more"
+"low content of certain parameters, in the conditions of CJSC Kyrgyz Petroleum "
+"Company. "
+
+#: templates/plans.html:14
+msgid "Достижения Компании"
+msgstr "Achievements"
+
+#: templates/plans.html:30
+msgid "Планы Компании"
+msgstr "Plans"
+
+#: templates/price_details.html:4
+msgid "Цены на "
+msgstr "Prices for "
+
+#: templates/price_details.html:10 templates/prices.html:10
+msgid "Цены на продукцию ЗАО <<КПК>> на"
+msgstr "Prices for the products of CJSC KPC for"
+
+#: templates/price_details.html:13 templates/prices.html:13
+msgid "Цены за все время"
+msgstr "All time prices"
+
+#: templates/price_details.html:19 templates/prices.html:19
+msgid "Наименование Продукта"
+msgstr "Product Name"
+
+#: templates/price_details.html:20 templates/prices.html:20
+msgid "Форма оплаты"
+msgstr "Form of Payment"
+
+#: templates/price_details.html:21 templates/prices.html:21
+msgid "Налоги"
+msgstr "Taxes"
+
+#: templates/price_details.html:22 templates/prices.html:22
+msgid "Цена"
+msgstr "Price"
+
+#: templates/price_details.html:27 templates/prices.html:27
+msgid "Бензин Аи-80"
+msgstr "Gasoline AI-80"
+
+#: templates/price_details.html:28 templates/price_details.html:43
+#: templates/price_details.html:58 templates/price_details.html:73
+#: templates/prices.html:28 templates/prices.html:43 templates/prices.html:58
+#: templates/prices.html:73
+msgid "Наличная"
+msgstr "Cash"
+
+#: templates/price_details.html:29 templates/price_details.html:44
+#: templates/price_details.html:59 templates/price_details.html:74
+#: templates/prices.html:29 templates/prices.html:44 templates/prices.html:59
+#: templates/prices.html:74
+msgid "с НДС и НСП"
+msgstr "with VAT and sales tax"
+
+#: templates/price_details.html:31 templates/price_details.html:38
+#: templates/price_details.html:46 templates/price_details.html:53
+#: templates/price_details.html:61 templates/price_details.html:68
+#: templates/prices.html:31 templates/prices.html:38 templates/prices.html:46
+#: templates/prices.html:53 templates/prices.html:61 templates/prices.html:68
+msgid "сом за 1 л."
+msgstr "som for 1 l."
+
+#: templates/price_details.html:35 templates/price_details.html:50
+#: templates/price_details.html:65 templates/price_details.html:80
+#: templates/prices.html:35 templates/prices.html:50 templates/prices.html:65
+#: templates/prices.html:80
+msgid "Безналичная"
+msgstr "Cashless"
+
+#: templates/price_details.html:36 templates/price_details.html:51
+#: templates/price_details.html:66 templates/price_details.html:81
+#: templates/prices.html:36 templates/prices.html:51 templates/prices.html:66
+#: templates/prices.html:81
+msgid "с НДС, но без НСП"
+msgstr "with VAT, but without sales tax"
+
+#: templates/price_details.html:42 templates/prices.html:42
+msgid "Дизельное топливо марки Л-0,2-40."
+msgstr "Diesel fuel grade L-0.2-40."
+
+#: templates/price_details.html:57 templates/prices.html:57
+msgid ""
+"Дизельное топливо марки Л-0,2-40. Л-0,5-40 с температурой застывания минус "
+"30°С"
+msgstr ""
+"Diesel fuel grade L-0.2-40. L-0.5-40 with a pour point minus"
+"30 ° C"
+
+#: templates/price_details.html:72 templates/prices.html:72
+msgid "Мазут М-100"
+msgstr "Fuel oil M-100"
+
+#: templates/price_details.html:76 templates/price_details.html:83
+#: templates/prices.html:76 templates/prices.html:83
+msgid "сом за 1 тн."
+msgstr "som for 1 tn."
+
+#: templates/prices.html:4
+msgid "Цены за весь период"
+msgstr "All time prices"
+
+#: templates/testimonials.html:14
+msgid "Отзывы клиентов"
+msgstr "Testimonials"

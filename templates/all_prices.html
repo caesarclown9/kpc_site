@@ -1,7 +1,7 @@
-{% extends 'base.html' %} {% load static %} 
+{% extends 'base.html' %} {% load i18n static %}
 
 {% block title %}
-<title>Все Цены - Kyrgyz Petroleum Company</title>
+<title>{% trans 'Все Цены' %} - Kyrgyz Petroleum Company</title>
 {% endblock title%}
 
 {% block content%}
@@ -19,10 +19,10 @@
 		<ul class="pagination justify-content-center" style='margin-bottom: 30px'>
 			{% if not page_obj.has_previous %}
 		  <li class="page-item disabled">
-			<a class="page-link" tabindex="-1">Пред</a>
+			<a class="page-link" tabindex="-1">{% trans 'Пред' %}</a>
 		  </li>
 		  {% else %}
-		  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Пред</a></li>
+		  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">{% trans 'Пред' %}</a></li>
 		  {% endif%}
 		  {% for i in paginator.page_range %}
 			{% if page_number == i %}
@@ -36,10 +36,10 @@
 
 		  {% if not page_obj.has_next %}
 		  <li class="page-item disabled">
-			<a class="page-link">След</a>
+			<a class="page-link">{% trans 'След' %}</a>
 		  </li>
 		  {% else %}
-		  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}" tabindex="-1">След</a>
+		  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}" tabindex="-1">{% trans 'След' %}</a>
 		  </li>
 		  {% endif %}
 		</ul>

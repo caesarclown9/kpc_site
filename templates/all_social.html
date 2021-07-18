@@ -1,14 +1,14 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load i18n static %}
 
 {% block title %}
-<title>Социальная Ответственность - Kyrgyz Petroleum Company</title>
+<title>{% trans 'Социальная Ответственность' %} - Kyrgyz Petroleum Company</title>
 {% endblock title%}
 
 {% block content%}
 
     <section class="section gray-bg" id="blog" style="height: 700px; margin-top:100px">
 		<div class="container">
-			<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_social' %}" style='color:white'>Социальная Ответсвенность</a></h4></button>
+			<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_social' %}" style='color:white'>{% trans 'Социальная Ответсвенность' %}</a></h4></button>
 			<div class="row">
 				{% for post in social %}
 				<div class="col-lg-4">
@@ -23,7 +23,7 @@
 							<p>{{ post.body|truncatechars:45 }}</p>
 							<div class="btn-bar" style='position:absolute; bottom: 10px'>
 								<a href="{% url 'crud:social_detail' pk=post.pk %}" class="px-btn-arrow">
-									<span>Подробнее</span>
+									<span>{% trans 'Подробнее' %}</span>
 									<i class="arrow"></i>
 								</a>
 							</div>

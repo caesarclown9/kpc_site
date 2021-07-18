@@ -1,7 +1,7 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load i18n static %}
 
 {% block title %}
-<title>Отзывы Клиентов - Kyrgyz Petroleum Company</title>
+<title>{% trans 'Отзывы Клиентов' %} - Kyrgyz Petroleum Company</title>
 {% endblock title%}
 
 {% block content%}
@@ -11,7 +11,7 @@
 			<!-- <div class="col-lg-6 p-0"> -->
 				<div class="testimonial-box">
 					<div class="testi-box-warp">
-						<h2>Отзывы клиентов</h2>
+						<h2>{% trans 'Отзывы клиентов' %}</h2>
 						<div class="testimonial-slider owl-carousel">
 							{% for review in t %}
 							<div class="testimonial">

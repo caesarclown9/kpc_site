@@ -1,86 +1,86 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load i18n static %}
 
 {% block title %}
-<title>Цены за весь период - Kyrgyz Petroleum Company</title>
+<title>{% trans 'Цены за весь период' %} - Kyrgyz Petroleum Company</title>
 {% endblock title%}
 
 {% block content%}
 
     <div style='margin-top: 150px; margin-left: 200px;'>
-        <h3>Цены на продукцию ЗАО <<КПК>> на {{ rates.date }}</h3>
+        <h3>{% trans 'Цены на продукцию ЗАО <<КПК>> на' %}{{ rates.date }}</h3>
     </div>
 
-    <button type="button" class="btn btn-danger" style='margin-top: 50px; margin-left: 926px'><a href="{% url 'crud:all_prices' %}" style='color:white'>Цены за все время</a></button>
+    <button type="button" class="btn btn-danger" style='margin-top: 50px; margin-left: 926px'><a href="{% url 'crud:all_prices' %}" style='color:white'>{% trans 'Цены за все время' %}</a></button>
 
 
     <table class="table table-bordered" style='margin-left:200px; width:900px; margin-bottom: 150px;'>
         <thead class='thead-dark'>
           <tr>
-			<th scope="col" style='width: 250px'>Наименование Продукта</th>
-			<th scope="col">Форма оплаты</th>
-			<th scope="col">Налоги</th>
-            <th scope="col">Цена</th>
+			<th scope="col" style='width: 250px'>{% trans 'Наименование Продукта' %}</th>
+			<th scope="col">{% trans 'Форма оплаты' %}</th>
+			<th scope="col">{% trans 'Налоги' %}</th>
+            <th scope="col">{% trans 'Цена' %}</th>
           </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan='2' style='text-align: center; vertical-align: middle'>Бензин Аи-80</th>
-                <td>Наличная</td>
-                <td>с НДС и НСП</td>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>{% trans 'Бензин Аи-80' %}</th>
+                <td>{% trans 'Наличная' %}</td>
+                <td>{% trans 'с НДС и НСП' %}</td>
 				{% if rates.price1 %}
-				<td>{{ rates.price1 }} сом за 1 л.</td>
+				<td>{{ rates.price1 }} {% trans 'сом за 1 л.' %}</td>
 				{% endif %}
             </tr>
             <tr>
-                <td>Безналичная</td>
-                <td>с НДС, но без НСП</td>
+                <td>{% trans 'Безналичная' %}</td>
+                <td>{% trans 'с НДС, но без НСП' %}</td>
 				{% if rates.price2 %}
-				<td>{{ rates.price2 }} сом за 1 л.</td>
+				<td>{{ rates.price2 }} {% trans 'сом за 1 л.' %}</td>
 				{% endif %}
             </tr>
 			<tr>
-                <th rowspan='2' style='text-align: center; vertical-align: middle'>Дизельное топливо марки Л-0,2-40.</th>
-                <td>Наличная</td>
-                <td>с НДС и НСП</td>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>{% trans 'Дизельное топливо марки Л-0,2-40.' %}</th>
+                <td>{% trans 'Наличная' %}</td>
+                <td>{% trans 'с НДС и НСП' %}</td>
 				{% if rates.diesel_price1 %}
-				<td>{{ rates.diesel_price1 }} сом за 1 л.</td>
+				<td>{{ rates.diesel_price1 }} {% trans 'сом за 1 л.' %}</td>
 				{% endif %}
             </tr>
 			<tr>
-                <td>Безналичная</td>
-                <td>с НДС, но без НСП</td>
+                <td>{% trans 'Безналичная' %}</td>
+                <td>{% trans 'с НДС, но без НСП' %}</td>
 				{% if rates.diesel_price2 %}
-				<td>{{ rates.diesel_price2 }} сом за 1 л.</td>
+				<td>{{ rates.diesel_price2 }} {% trans 'сом за 1 л.' %}</td>
 				{% endif %}
             </tr>
 			<tr>
-                <th rowspan='2' style='text-align: center; vertical-align: middle'>Дизельное топливо марки Л-0,2-40. Л-0,5-40 с температурой застывания минус 30°С</th>
-                <td>Наличная</td>
-                <td>с НДС и НСП</td>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>{% trans 'Дизельное топливо марки Л-0,2-40. Л-0,5-40 с температурой застывания минус 30°С' %}</th>
+                <td>{% trans 'Наличная' %}</td>
+                <td>{% trans 'с НДС и НСП' %}</td>
 				{% if rates.diesel_price3 %}
-				<td>{{ rates.diesel_price3 }} сом за 1 л.</td>
+				<td>{{ rates.diesel_price3 }} {% trans 'сом за 1 л.' %}</td>
 				{% endif %}
             </tr>
 			<tr>
-                <td>Безналичная</td>
-                <td>с НДС, но без НСП</td>
+                <td>{% trans 'Безналичная' %}</td>
+                <td>{% trans 'с НДС, но без НСП' %}</td>
 				{% if rates.diesel_price4 %}
-				<td>{{ rates.diesel_price4 }} сом за 1 л.</td>
+				<td>{{ rates.diesel_price4 }} {% trans 'сом за 1 л.' %}</td>
 				{% endif %}
             </tr>
 			<tr>
-                <th rowspan='2' style='text-align: center; vertical-align: middle'>Мазут М-100</th>
-                <td>Наличная</td>
-                <td>с НДС и НСП</td>
+                <th rowspan='2' style='text-align: center; vertical-align: middle'>{% trans 'Мазут М-100' %}</th>
+                <td>{% trans 'Наличная' %}</td>
+                <td>{% trans 'с НДС и НСП' %}</td>
 				{% if rates.fuel_price1 %}
-				<td>{{ rates.fuel_price1 }} сом за 1 тн.</td>
+				<td>{{ rates.fuel_price1 }} {% trans 'сом за 1 тн.' %}</td>
 				{% endif %}
             </tr>
 			<tr>
-                <td>Безналичная</td>
-                <td>с НДС, но без НСП</td>
+                <td>{% trans 'Безналичная' %}</td>
+                <td>{% trans 'с НДС, но без НСП' %}</td>
 				{% if rates.fuel_price2 %}
-				<td>{{ rates.fuel_price2 }} сом за 1 тн.</td>
+				<td>{{ rates.fuel_price2 }} {% trans 'сом за 1 тн.' %}</td>
 				{% endif %}            </tr>
         </tbody>
       </table>

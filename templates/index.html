@@ -1,20 +1,20 @@
-{% extends 'base.html' %} {% load static %} 
+{% extends 'base.html' %} {% load static i18n %} 
 
 {% block active %}
 <ul>
-	<li class='active'><a href="{% url 'crud:index' %}" style='height: 70px'>Главная</a></li>
-	<li><a href="{% url 'crud:about' %}" style='height: 70px'>О нас</a></li>
-	<li><a href="{% url 'crud:partners' %}" style='height: 70px'>Для Клиентов и Партнеров</a></li>
+	<li class='active'><a href="{% url 'crud:index' %}" style='height: 70px'>{% trans 'Главная' %}</a></li>
+	<li><a href="{% url 'crud:about' %}" style='height: 70px'>{% trans 'О нас' %}</a></li>
+	<li><a href="{% url 'crud:partners' %}" style='height: 70px'>{% trans 'Для Клиентов и Партнеров' %}</a></li>
 </ul>
 {% endblock active %}
 
 {% block content%}
 
 	<!-- Hero section  -->
-	<section class="hero-section" style='padding-top: 150px; height: 670px'>
-		<div class="hero-slider owl-carousel" style='height: 500px; width: 800px; margin:auto; '>
+	<section class="hero-section" style="padding-top: 150px; height: 670px;">
+		<div class="hero-slider owl-carousel" style='height: 500px; width: 800px; margin:auto;'>
 			{% for slide in slides %}
-				<div class="hero-item set-bg" style='height: 500px'  data-setbg="{{ slide.image.url }}">
+				<div class="hero-item set-bg" style='height: 500px' data-setbg="{{ slide.image.url }}">
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-8">
@@ -31,25 +31,25 @@
 	<div class="container my-4">
 		<div class="row text-center">
 		  <div class="col-md-6 mb-4">
-			<h2 class="my-5 h2" style='font-weight: bold'><a href="{% url 'crud:prices' %}" style='color:black'> Цены на Продукцию</a></h2>
+			<h2 class="my-5 h2" style='font-weight: bold; height: 40px'><a href="{% url 'crud:prices' %}" style='color:black'>{% trans "Цены на Продукцию" %}</a></h2>
 			<a href="{% url 'crud:prices' %}"><img style='filter: drop-shadow(2px 4px 6px black); width:200px; height: 200px' class="rounded-circle" alt="100x100" src="{% static 'img/barrel.jpg' %}"
 			  data-holder-rendered="true">
 			</a>
 		  </div>
 		  <div class="col-md-6 mb-4">
-			<h2 class="my-5 h2" style='font-weight: bold'><a href="{% url 'crud:plans' %}" style='color:black'>Достижения и Планы</a></h2>
+			<h2 class="my-5 h2" style='font-weight: bold; height: 40px'><a href="{% url 'crud:plans' %}" style='color:black'>{% trans "Достижения и Планы" %}</a></h2>
 			<a href="{% url 'crud:plans' %}"><img style='filter: drop-shadow(2px 4px 6px black); width:200px; height: 200px' class="rounded-circle z-depth-2" alt="100x100" src="{% static 'img/oil.jpg' %}"
 			  data-holder-rendered="true">
 			</a>
 		  </div>
 		  <div class="col-md-6 mb-4">
-			<h2 class="my-5 h2" style='font-weight: bold'><a href="{% url 'crud:ecology' %}" style='color:black'>Экология и Безопасность</a></h2>
+			<h2 class="my-5 h2" style='font-weight: bold; height: 40px'><a href="{% url 'crud:ecology' %}" style='color:black'>{% trans "Экология и Безопасность" %}</a></h2>
 			<a href="{% url 'crud:ecology' %}"><img style='filter: drop-shadow(2px 4px 6px black); width:200px; height: 200px' class="rounded-circle z-depth-2" alt="100x100" src="{% static 'img/ecology.jpg' %}"
 			  data-holder-rendered="true">
 			</a>
 		  </div>
 		  <div class="col-md-6 mb-4">
-			<h2 class="my-5 h2" style='font-weight: bold'><a href="{% url 'crud:testimonials' %}" style='color:black'>Отзывы Клиентов</a></h2>
+			<h2 class="my-5 h2" style='font-weight: bold; height: 40px'><a href="{% url 'crud:testimonials' %}" style='color:black'>{% trans "Отзывы Клиентов" %}</a></h2>
 			<a href="{% url 'crud:testimonials' %}"><img style='filter: drop-shadow(2px 4px 6px black); width:200px; height: 200px' class="rounded-circle z-depth-2" alt="100x100" src="{% static 'img/reviews.png' %}"
 			  data-holder-rendered="true">
 			</a>
@@ -63,7 +63,7 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="blog-grid">
-						<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_news' %}" style='color:white'>Все Новости</a></h4></button>
+						<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_news' %}" style='color:white'>{% trans "Все Новости" %}</a></h4></button>
 						<div class="blog-img" style='margin-top: 10px;'>
 							<div class="date">{{ news.created_at|date:"F d Y" }}</div>
 							<a href="{% url 'crud:news_detail' pk=news.pk %}">
@@ -75,7 +75,7 @@
 							<p>{{ news.body|truncatechars:45 }}</p>
 							<div class="btn-bar" style='position:absolute; bottom: 10px'>
 								<a href="{% url 'crud:news_detail' pk=news.pk %}" class="px-btn-arrow">
-									<span>Подробнее</span>
+									<span>{% trans "Подробнее" %}</span>
 									<i class="arrow"></i>
 								</a>
 							</div>
@@ -84,7 +84,7 @@
 				</div>
 				<div class="col-lg-4">
 					<div class="blog-grid">
-						<button type="button" class="btn btn-danger"><h4 style='font-size: 21px'><a href="{% url 'crud:all_social' %}" style='color:white'>Социальная Ответственность</a></h4></button>
+						<button type="button" class="btn btn-danger"><h4 style='font-size: 21px'><a href="{% url 'crud:all_social' %}" style='color:white'>{% trans "Социальная Ответственность" %}</a></h4></button>
 						<div class="blog-img" style='margin-top: 10px;'>
 							<a href="{% url 'crud:social_detail' pk=social.pk %}">
 								<img style='width:380px; height:300px' src="{{ social.image.url}}" title="" alt="">
@@ -95,7 +95,7 @@
 							<p>{{ social.body|truncatechars:45 }}</p>
 							<div class="btn-bar" style='position:absolute; bottom: 10px'>
 								<a href="{% url 'crud:social_detail' pk=social.pk %}" class="px-btn-arrow">
-									<span>Подробнее</span>
+									<span>{% trans "Подробнее" %}</span>
 									<i class="arrow"></i>
 								</a>
 							</div>
@@ -104,7 +104,7 @@
 				</div>
 				<div class="col-lg-4">
 					<div class="blog-grid">
-						<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_leaders' %}" style='color:white'>Наши Люди</a></h4></button>
+						<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_leaders' %}" style='color:white'>{% trans "Наши Люди" %}</a></h4></button>
 						<div class="blog-img" style='margin-top: 10px;'>
 							<a href="{% url 'crud:leader_detail' pk=leader.pk %}">
 								<img style='width:380px; height:300px' src="{{ leader.image.url}}" title="" alt="">
@@ -115,7 +115,7 @@
 							<p>{{ leader.body|truncatechars:45 }}</p>
 							<div class="btn-bar" style='position:absolute; bottom: 10px'>
 								<a href="{% url 'crud:leader_detail' pk=leader.pk %}" class="px-btn-arrow">
-									<span>Подробнее</span>
+									<span>{% trans "Подробнее" %}</span>
 									<i class="arrow"></i>
 								</a>
 							</div>
@@ -134,10 +134,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-9 d-flex align-items-center">
-					<h2>Безопасность и Экология</h2>
+					<h2>{% trans 'Безопасность и Экология' %}</h2>
 				</div>
 				<div class="col-lg-3 text-lg-right" >
-					<a href="{% url 'crud:ecology' %}" class="site-btn sb-dark">Политика охраны окружающей среды</a>
+					<a href="{% url 'crud:ecology' %}" class="site-btn sb-dark">{% trans 'Политика охраны окружающей среды' %}</a>
 				</div>
 			</div>
 		</div>
@@ -150,11 +150,15 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="video-text">
-						<h2>Безопасность и экология</h2>
-						<p>От имени Совета Директоров «Кыргыз Петролеум Компани» мы подтверждаем наше обязательство достичь наивысшего уровня в охране здоровья, окружающей среды и безопасности во всех сферах нашей коммерческой и производственной деятельности. Данное обязательство основывается на истинных принципах бизнеса и является фундаментом системы административного управления.
+						<h2>{% trans 'Безопасность и экология' %}</h2>
+						<p>
+							{% blocktrans trimmed%}
+							 От имени Совета Директоров «Кыргыз Петролеум Компани» мы подтверждаем наше обязательство достичь наивысшего уровня в охране здоровья, окружающей среды и безопасности во всех сферах нашей коммерческой и производственной деятельности. Данное обязательство основывается на истинных принципах бизнеса и является фундаментом системы административного управления.
 							Наиболее важной частью нашей коммерческой деятельности является непрерывное совершенствование нашей деятельности и гарантия того, что безупречное обеспечение охраны здоровья, окружающей среды и безопасности будут признаны  нашими клиентами как одно из основных достоинств Компании.
 							Нашей ответственностью и ответственностью каждого из работников «Кыргыз Петролеум Компани» совместно с теми, кто поддерживает нашу деятельность, является воплощение в жизнь этого обязательства по охране здоровья, окружающей среды и безопасности,  которое является ключевым элементом нашего бизнеса, и нам необходимо сделать его неотъемлемой частью всех сфер нашей деятельности.
-							Каждый из нас исполняет определенную роль в достижении этой цели, поэтому мы все вместе будем принимать активное участие в исполнении данного обязательства по усовершенствованию и воплощению в жизнь нашей программы по охране здоровья, окружающей среды и безопасности, стремясь к полному отсутствию инцидентов.</p>
+							Каждый из нас исполняет определенную роль в достижении этой цели, поэтому мы все вместе будем принимать активное участие в исполнении данного обязательства по усовершенствованию и воплощению в жизнь нашей программы по охране здоровья, окружающей среды и безопасности, стремясь к полному отсутствию инцидентов.
+							{% endblocktrans%}
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-6">

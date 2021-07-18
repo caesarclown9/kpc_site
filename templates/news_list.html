@@ -1,14 +1,14 @@
-{% extends 'base.html' %} {% load static %}
+{% extends 'base.html' %} {% load i18n static %}
 
 {% block title %}
-<title>Все Новости - Kyrgyz Petroleum Company</title>
+<title>{% trans 'Все Новости - Kyrgyz Petroleum Company' %}</title>
 {% endblock title%}
 
 {% block content%}
 
     <section class="section gray-bg" id="blog" style="height: 700px; margin-top:100px">
 		<div class="container">
-			<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_news' %}" style='color:white'>Все Новости</a></h4></button>
+			<button type="button" class="btn btn-danger"><h4><a href="{% url 'crud:all_news' %}" style='color:white'>{% trans 'Все Новости' %}</a></h4></button>
 			<div class="row">
 				{% for post in news %}
 				<div class="col-lg-4">
@@ -24,7 +24,7 @@
 							<p>{{ post.body|truncatechars:45 }}</p>
 							<div class="btn-bar" style='position:absolute; bottom: 10px'>
 								<a href="{% url 'crud:news_detail' pk=post.pk %}" class="px-btn-arrow">
-									<span>Подробнее</span>
+									<span>{% trans 'Подробнее' %}</span>
 									<i class="arrow"></i>
 								</a>
 							</div>
@@ -38,10 +38,10 @@
 			<ul class="pagination justify-content-center" style='margin-top: 50px'>
 				{% if not page_obj.has_previous %}
 			  <li class="page-item disabled">
-				<a class="page-link" tabindex="-1">Пред</a>
+				<a class="page-link" tabindex="-1">{% trans 'Пред' %}</a>
 			  </li>
 			  {% else %}
-			  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Пред</a></li>
+			  <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">{% trans 'Пред' %}</a></li>
 			  {% endif%}
 			  {% for i in paginator.page_range %}
 				{% if page_number == i %}
@@ -55,10 +55,10 @@
 	
 			  {% if not page_obj.has_next %}
 			  <li class="page-item disabled">
-				<a class="page-link">След</a>
+				<a class="page-link">{% trans 'След' %}</a>
 			  </li>
 			  {% else %}
-			  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}" tabindex="-1">След</a>
+			  <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}" tabindex="-1">{% trans 'След' %}</a>
 			  </li>
 			  {% endif %}
 			</ul>

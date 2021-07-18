@@ -1,4 +1,5 @@
 {% load static%}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -8,7 +9,6 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="Industry.INC HTML Template">
 	<meta name="keywords" content="industry, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<!-- Favicon -->
 	<link href="{% static 'img/left_logo.png' %}" rel="shortcut icon"/>
@@ -43,7 +43,7 @@
 	<header class="header-section clearfix">
 		<div class="site-navbar" style='background: rgb(172, 18, 18); height: 70px'>
 			<!-- Logo -->
-			<a href="{% url 'crud:index' %}" class="site-logo" style="position: absolute; left: -63px;">
+			<a href="{% url 'crud:index' %}" class="site-logo" style="position: absolute; left: -5%;">
 				<img src="{% static 'img/left_logo.png' %}" alt="">
 			</a>
 			<div class="header-right">
@@ -61,8 +61,8 @@
 						<img src="{% static 'img/icons/map-marker.png' %}" alt="" class="">
 					</div>
 					<div class="hib-text">
-						<h6>улица Промышленная 202</h6>
-						<p>город Жалал-Абад, 715600</p>
+						<h6>{% trans 'улица Промышленная 202' %}</h6>
+						<p>{% trans 'город Жалал-Абад, 715600' %}</p>
 					</div>
 				</div>
 			</div>
@@ -70,14 +70,29 @@
 			<nav class="site-nav-menu" style='margin-left: 211px'>
                 {% block active %}
 				<ul>
-					<li><a href="{% url 'crud:index' %}" style='height: 70px'>Главная</a></li>
-					<li><a href="{% url 'crud:about' %}" style='height: 70px'>О нас</a></li>
-					<li><a href="{% url 'crud:partners' %}" style='height: 70px'>Для Клиентов и Партнеров</a></li>
+					<li><a href="{% url 'crud:index' %}" style='height: 70px'>{% trans 'Главная' %}</a></li>
+					<li><a href="{% url 'crud:about' %}" style='height: 70px'>{% trans 'О нас' %}</a></li>
+					<li><a href="{% url 'crud:partners' %}" style='height: 70px'>{% trans 'Для Клиентов и Партнеров' %}</a></li>
 				</ul>
                 {% endblock active %}
 			</nav>
 			<div style='height: 76.5px; background: black; margin-left: 195px; margin-top: 16px'>
-				<h3 style='color: white; text-align: center; padding: 20px'>ЗАО <<Кыргыз Петролеум Компани>></h3>
+				<h3 style='color: white; text-align: center; padding: 20px; backdrop-filter: blur(0px);'>{% trans 'ЗАО <<Кыргыз Петролеум Компани>>' %}</h3>
+				<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+					<input name='next' type="hidden" value='{{ redirect_to }}'>
+					<select name="language">
+						{% get_current_language as LANGUAGE_CODE %}
+						{% get_available_languages as LANGUAGES %}
+						{% get_language_info_list for LANGUAGES as languages %}
+						{% for language in languages %}
+							<option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}
+								selected{% endif%}>
+								{{ language.name_local }} ({{ language.code }})
+							</option>
+						{% endfor %}
+					</select>
+					<input type="submit" value="{% trans 'Выбрать' %}">
+				</form>
 			</div>
 		</div>
 	</header>
@@ -89,43 +104,43 @@
 	<footer class="footer-section spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-3">
 					<div class="footer-widget about-widget" style='margin-left: -30px; width: 350px'>
-						<h5 style='color:#ffc600'>ЗАО "Кыргыз Петролеум Компани"</h5>
-						<p> - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.</p>
+						<h5 style='color:#ffc600'>{% trans 'ЗАО "Кыргыз Петролеум Компани"' %}</h5>
+						<p>{% trans ' - является первым интегрированным нефтедобытчиком, переработчиком и продавцом нефтепродуктов в КР.' %}</p>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="col-lg-3">
 					<div class="footer-widget" style='margin-left: 50px'>
-						<h2 class="fw-title" style='margin-bottom: 60px'>Присоединиться</h2>
+						<h2 class="fw-title" style='margin-bottom: 60px'>{% trans 'Присоединиться' %}</h2>
 						<div class="footer-social">
 							<a href="" style='height:35px; width:35px'><i class="fa fa-facebook"></i></a>
 							<a href="" style='height:35px; width:35px'><i class="fa fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
+				<div class="col-lg-3">
 					<div class="footer-widget">
-						<h2 class="fw-title">Телефонные Номера (+996 3722)</h2>
+						<h2 class="fw-title">{% trans 'Телефонные Номера (+996 3722)' %}</h2>
 						<ul>
-							<li><p><strong>55505 </strong>Приемная Президента</p></li>
-							<li><p><strong>52315 </strong>Факс</p></li>
-							<li><p><strong>50327 </strong>Управляющий НПЗ</p></li>
-							<li><p><strong>52775 </strong>Комната Управления НПЗ</p></li>
-							<li><p><strong>50229 </strong>Бухгалтерия</p></li>
+							<li><p><strong>55505 </strong>{% trans 'Приемная Президента' %}</p></li>
+							<li><p><strong>52315 </strong>{% trans 'Факс' %}</p></li>
+							<li><p><strong>50327 </strong>{% trans 'Управляющий НПЗ' %}</p></li>
+							<li><p><strong>52775 </strong>{% trans 'Комната Управления НПЗ' %}</p></li>
+							<li><p><strong>50229 </strong>{% trans 'Бухгалтерия' %}</p></li>
 
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-7" >
+				<div class="col-lg-3" >
 					<div class="footer-widget">
-						<h2 class="fw-title">Контакты</h2>
+						<h2 class="fw-title">{% trans 'Контакты' %}</h2>
 						<div class="footer-info-box">
 							<div class="fib-icon">
 								<img src="{% static 'img/icons/map-marker.png' %}" alt="" class="">
 							</div>
 							<div class="fib-text">
-								<p>улица Промышленная 202<br>город Жалал-Абад, 715600</p>
+								<p>{% trans 'улица Промышленная 202'%}<br>{% trans 'город Жалал-Абад, 715600' %}</p>
 							</div>
 						</div>
 						<div class="footer-info-box">
@@ -133,7 +148,7 @@
 								<img src="{% static 'img/icons/phone.png' %}" alt="" class="">
 							</div>
 							<div class="fib-text">
-								<p>+996 3722 55505<br>info@kpc.com</p>
+								<p>+996 3722 55505<br>info@kpc.kg</p>
 							</div>
 						</div>
 					</div>

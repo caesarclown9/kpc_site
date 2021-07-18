@@ -67,6 +67,7 @@ $(window).on('load', function() {
 		loop: true,
 		navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
 		autoplay: true,
+		autoplayTimeout: 10000,
 		items: 1,
 		animateOut: 'fadeOut',
     	animateIn: 'fadeIn',
