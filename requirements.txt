@@ -1,17 +1,13 @@
 asgiref==3.3.4
-beautifulsoup4==4.9.3
-bs4==0.0.1
 certifi==2020.12.5
 chardet==4.0.0
 defusedxml==0.7.1
 diff-match-patch==20200713
 Django==3.2
-django-import-export==2.5.0
 et-xmlfile==1.1.0
 idna==2.10
 lml==0.1.0
 MarkupPy==1.14
-mysqlclient==2.0.3
 odfpy==1.4.1
 openpyxl==3.0.7
 Pillow==8.2.0
